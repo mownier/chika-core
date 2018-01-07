@@ -22,6 +22,7 @@
 		48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC720026AB400A1FED1 /* PersonQuery.swift */; };
 		48E1CDCA20026B4A00A1FED1 /* RecentChatMessageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC920026B4A00A1FED1 /* RecentChatMessageQuery.swift */; };
 		48E1CDCC20026CDC00A1FED1 /* ContactQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDCB20026CDC00A1FED1 /* ContactQuery.swift */; };
+		48E1CDD22002708C00A1FED1 /* PersonSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD12002708C00A1FED1 /* PersonSearch.swift */; };
 		48E80058200136CC00F5D902 /* ChikaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E8004E200136CC00F5D902 /* ChikaCore.framework */; };
 		48E8005D200136CC00F5D902 /* ChikaCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8005C200136CC00F5D902 /* ChikaCoreTests.swift */; };
 		48E8005F200136CC00F5D902 /* ChikaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E80051200136CC00F5D902 /* ChikaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +61,7 @@
 		48E1CDC720026AB400A1FED1 /* PersonQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonQuery.swift; sourceTree = "<group>"; };
 		48E1CDC920026B4A00A1FED1 /* RecentChatMessageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageQuery.swift; sourceTree = "<group>"; };
 		48E1CDCB20026CDC00A1FED1 /* ContactQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactQuery.swift; sourceTree = "<group>"; };
+		48E1CDD12002708C00A1FED1 /* PersonSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSearch.swift; sourceTree = "<group>"; };
 		48E8004E200136CC00F5D902 /* ChikaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChikaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E80051200136CC00F5D902 /* ChikaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChikaCore.h; sourceTree = "<group>"; };
 		48E80052200136CC00F5D902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 			path = Query;
 			sourceTree = "<group>";
 		};
+		48E1CDD02002708C00A1FED1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				48E1CDD12002708C00A1FED1 /* PersonSearch.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		48E80044200136CC00F5D902 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 			children = (
 				48A9F6B02001EA88003A4168 /* Auth */,
 				48A9F6C620020867003A4168 /* Query */,
+				48E1CDD02002708C00A1FED1 /* Search */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A9F6B82001ECC0003A4168 /* SignInTask.swift in Sources */,
+				48E1CDD22002708C00A1FED1 /* PersonSearch.swift in Sources */,
 				48A9F6C8200208E4003A4168 /* InboxQuery.swift in Sources */,
 				48E8007A2001400500F5D902 /* Contact.swift in Sources */,
 				48A9F6BE2001F665003A4168 /* RefreshTokenTask.swift in Sources */,
