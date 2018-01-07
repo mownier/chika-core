@@ -8,12 +8,12 @@
 
 public struct Presence {
     
-    var activeOn: Double
+    var activeOn: Date
     var isActive: Bool
     var personID: ID
     
     public init() {
-        self.activeOn = 0
+        self.activeOn = Date()
         self.isActive = false
         self.personID = ID("")
     }
