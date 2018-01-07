@@ -109,6 +109,34 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		48A9F6C32001FF2C003A4168 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				48E8006B2001372100F5D902 /* Auth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		48A9F6C42001FF3B003A4168 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				48E8006D2001382900F5D902 /* Chat.swift */,
+				48E800792001400500F5D902 /* Contact.swift */,
+				48E800712001387200F5D902 /* Message.swift */,
+				48E8006F2001385B00F5D902 /* Person.swift */,
+				48E8007B200141E300F5D902 /* Presence.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		48A9F6C52001FF4A003A4168 /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				48E8007520013D4A00F5D902 /* Unique.swift */,
+			);
+			path = Unique;
+			sourceTree = "<group>";
+		};
 		48E80044200136CC00F5D902 = {
 			isa = PBXGroup;
 			children = (
@@ -160,13 +188,9 @@
 		48E80069200136EA00F5D902 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48E8006B2001372100F5D902 /* Auth.swift */,
-				48E8006D2001382900F5D902 /* Chat.swift */,
-				48E800792001400500F5D902 /* Contact.swift */,
-				48E800712001387200F5D902 /* Message.swift */,
-				48E8006F2001385B00F5D902 /* Person.swift */,
-				48E8007B200141E300F5D902 /* Presence.swift */,
-				48E8007520013D4A00F5D902 /* Unique.swift */,
+				48A9F6C32001FF2C003A4168 /* Auth */,
+				48A9F6C42001FF3B003A4168 /* Store */,
+				48A9F6C52001FF4A003A4168 /* Unique */,
 			);
 			path = Model;
 			sourceTree = "<group>";
