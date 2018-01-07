@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A9F6B32001EB85003A4168 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B22001EB85003A4168 /* Error.swift */; };
+		48A9F6B62001EC35003A4168 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B52001EC35003A4168 /* Result.swift */; };
+		48A9F6B82001ECC0003A4168 /* SignInTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignInTask.swift */; };
+		48A9F6BA2001F384003A4168 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B92001F384003A4168 /* RegisterTask.swift */; };
+		48A9F6BC2001F499003A4168 /* SignOutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BB2001F499003A4168 /* SignOutTask.swift */; };
+		48A9F6BE2001F665003A4168 /* RefreshTokenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */; };
+		48A9F6C02001F7AE003A4168 /* ChangeEmailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */; };
+		48A9F6C22001F9CB003A4168 /* ChangePasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */; };
 		48E80058200136CC00F5D902 /* ChikaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E8004E200136CC00F5D902 /* ChikaCore.framework */; };
 		48E8005D200136CC00F5D902 /* ChikaCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8005C200136CC00F5D902 /* ChikaCoreTests.swift */; };
 		48E8005F200136CC00F5D902 /* ChikaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E80051200136CC00F5D902 /* ChikaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48A9F6B22001EB85003A4168 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		48A9F6B52001EC35003A4168 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		48A9F6B72001ECC0003A4168 /* SignInTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTask.swift; sourceTree = "<group>"; };
+		48A9F6B92001F384003A4168 /* RegisterTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
+		48A9F6BB2001F499003A4168 /* SignOutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutTask.swift; sourceTree = "<group>"; };
+		48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenTask.swift; sourceTree = "<group>"; };
+		48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailTask.swift; sourceTree = "<group>"; };
+		48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTask.swift; sourceTree = "<group>"; };
 		48E8004E200136CC00F5D902 /* ChikaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChikaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E80051200136CC00F5D902 /* ChikaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChikaCore.h; sourceTree = "<group>"; };
 		48E80052200136CC00F5D902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +80,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48A9F6B02001EA88003A4168 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */,
+				48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */,
+				48A9F6B92001F384003A4168 /* RegisterTask.swift */,
+				48A9F6B72001ECC0003A4168 /* SignInTask.swift */,
+				48A9F6BB2001F499003A4168 /* SignOutTask.swift */,
+				48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		48A9F6B12001EB75003A4168 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				48A9F6B22001EB85003A4168 /* Error.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		48A9F6B42001EC1F003A4168 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				48A9F6B52001EC35003A4168 /* Result.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		48E80044200136CC00F5D902 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +149,9 @@
 		48E80068200136DC00F5D902 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				48A9F6B12001EB75003A4168 /* Error */,
 				48E80069200136EA00F5D902 /* Model */,
+				48A9F6B42001EC1F003A4168 /* Result */,
 				48E8006A200136FA00F5D902 /* Service */,
 			);
 			path = Source;
@@ -127,6 +174,7 @@
 		48E8006A200136FA00F5D902 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				48A9F6B02001EA88003A4168 /* Auth */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -242,13 +290,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A9F6B82001ECC0003A4168 /* SignInTask.swift in Sources */,
 				48E8007A2001400500F5D902 /* Contact.swift in Sources */,
+				48A9F6BE2001F665003A4168 /* RefreshTokenTask.swift in Sources */,
 				48E8007620013D4A00F5D902 /* Unique.swift in Sources */,
 				48E800702001385B00F5D902 /* Person.swift in Sources */,
 				48E800722001387200F5D902 /* Message.swift in Sources */,
+				48A9F6C02001F7AE003A4168 /* ChangeEmailTask.swift in Sources */,
 				48E8006C2001372100F5D902 /* Auth.swift in Sources */,
 				48E8006E2001382900F5D902 /* Chat.swift in Sources */,
+				48A9F6B62001EC35003A4168 /* Result.swift in Sources */,
 				48E8007C200141E300F5D902 /* Presence.swift in Sources */,
+				48A9F6BA2001F384003A4168 /* RegisterTask.swift in Sources */,
+				48A9F6B32001EB85003A4168 /* Error.swift in Sources */,
+				48A9F6BC2001F499003A4168 /* SignOutTask.swift in Sources */,
+				48A9F6C22001F9CB003A4168 /* ChangePasswordTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
