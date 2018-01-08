@@ -45,8 +45,13 @@ public class RegistrarOperation: RegistrarOperator {
     }
     
     public func register(using registrar: Registrar) -> Bool {
+        defer {
+            email = nil
+            password = nil
+            completion = nil
+        }
+        
         guard email != nil, password != nil else {
-            cleanUp()
             return false
         }
         
@@ -54,13 +59,6 @@ public class RegistrarOperation: RegistrarOperator {
         let ok = registrar.register(withEmail: email!, password: password!) { result in
             callback?(result)
         }
-        cleanUp()
         return ok
-    }
-    
-    func cleanUp() {
-        email = nil
-        password = nil
-        completion = nil
     }
 }
