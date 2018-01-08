@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4848403C2003D7790020D1AB /* SignOutMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403B2003D7790020D1AB /* SignOutMock.swift */; };
+		4848403E2003D7C80020D1AB /* SignOutOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403D2003D7C80020D1AB /* SignOutOperationTests.swift */; };
+		484840402003D90E0020D1AB /* PasswordUpdaterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */; };
+		484840422003D9560020D1AB /* PasswordUpdaterOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484840412003D9560020D1AB /* PasswordUpdaterOperationTests.swift */; };
 		48A9F6B32001EB85003A4168 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B22001EB85003A4168 /* Error.swift */; };
 		48A9F6B62001EC35003A4168 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B52001EC35003A4168 /* Result.swift */; };
 		48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignIn.swift */; };
@@ -22,6 +26,14 @@
 		48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95520032D62003BB573 /* PersonRegistrar.swift */; };
 		48B1A95820032F11003BB573 /* PresenceSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95720032F11003BB573 /* PresenceSwitcher.swift */; };
 		48B1A95C200332D1003BB573 /* TypingSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95B200332D1003BB573 /* TypingSwitcher.swift */; };
+		48B1A96320034464003BB573 /* EmailUpdaterOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A96220034464003BB573 /* EmailUpdaterOperationTests.swift */; };
+		48B1A966200344B2003BB573 /* EmailUpdaterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A965200344B2003BB573 /* EmailUpdaterMock.swift */; };
+		48B1A96A200349F1003BB573 /* AccessTokenRefresherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A969200349F1003BB573 /* AccessTokenRefresherMock.swift */; };
+		48B1A96C20034A08003BB573 /* AccessTokenRefresherOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A96B20034A08003BB573 /* AccessTokenRefresherOperationTests.swift */; };
+		48B1A96E20034B24003BB573 /* RegistrarMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A96D20034B24003BB573 /* RegistrarMock.swift */; };
+		48B1A97020034B53003BB573 /* RegistrarOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A96F20034B53003BB573 /* RegistrarOperationTests.swift */; };
+		48B1A97220035019003BB573 /* SignInOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A97120035019003BB573 /* SignInOperationTests.swift */; };
+		48B1A97420035031003BB573 /* SignInMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A97320035031003BB573 /* SignInMock.swift */; };
 		48E1CDC4200266BA00A1FED1 /* ChatQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC3200266BA00A1FED1 /* ChatQuery.swift */; };
 		48E1CDC620026A1F00A1FED1 /* MessageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC520026A1F00A1FED1 /* MessageQuery.swift */; };
 		48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC720026AB400A1FED1 /* PersonQuery.swift */; };
@@ -54,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4848403B2003D7790020D1AB /* SignOutMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutMock.swift; sourceTree = "<group>"; };
+		4848403D2003D7C80020D1AB /* SignOutOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutOperationTests.swift; sourceTree = "<group>"; };
+		4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUpdaterMock.swift; sourceTree = "<group>"; };
+		484840412003D9560020D1AB /* PasswordUpdaterOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUpdaterOperationTests.swift; sourceTree = "<group>"; };
 		48A9F6B22001EB85003A4168 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		48A9F6B52001EC35003A4168 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		48A9F6B72001ECC0003A4168 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -69,6 +85,14 @@
 		48B1A95520032D62003BB573 /* PersonRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrar.swift; sourceTree = "<group>"; };
 		48B1A95720032F11003BB573 /* PresenceSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceSwitcher.swift; sourceTree = "<group>"; };
 		48B1A95B200332D1003BB573 /* TypingSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingSwitcher.swift; sourceTree = "<group>"; };
+		48B1A96220034464003BB573 /* EmailUpdaterOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUpdaterOperationTests.swift; sourceTree = "<group>"; };
+		48B1A965200344B2003BB573 /* EmailUpdaterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUpdaterMock.swift; sourceTree = "<group>"; };
+		48B1A969200349F1003BB573 /* AccessTokenRefresherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRefresherMock.swift; sourceTree = "<group>"; };
+		48B1A96B20034A08003BB573 /* AccessTokenRefresherOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRefresherOperationTests.swift; sourceTree = "<group>"; };
+		48B1A96D20034B24003BB573 /* RegistrarMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarMock.swift; sourceTree = "<group>"; };
+		48B1A96F20034B53003BB573 /* RegistrarOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarOperationTests.swift; sourceTree = "<group>"; };
+		48B1A97120035019003BB573 /* SignInOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOperationTests.swift; sourceTree = "<group>"; };
+		48B1A97320035031003BB573 /* SignInMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMock.swift; sourceTree = "<group>"; };
 		48E1CDC3200266BA00A1FED1 /* ChatQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuery.swift; sourceTree = "<group>"; };
 		48E1CDC520026A1F00A1FED1 /* MessageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageQuery.swift; sourceTree = "<group>"; };
 		48E1CDC720026AB400A1FED1 /* PersonQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonQuery.swift; sourceTree = "<group>"; };
@@ -183,6 +207,32 @@
 			path = Query;
 			sourceTree = "<group>";
 		};
+		48B1A95F20034431003BB573 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				48B1A96220034464003BB573 /* EmailUpdaterOperationTests.swift */,
+				48B1A96B20034A08003BB573 /* AccessTokenRefresherOperationTests.swift */,
+				48B1A96F20034B53003BB573 /* RegistrarOperationTests.swift */,
+				48B1A97120035019003BB573 /* SignInOperationTests.swift */,
+				4848403D2003D7C80020D1AB /* SignOutOperationTests.swift */,
+				484840412003D9560020D1AB /* PasswordUpdaterOperationTests.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		48B1A964200344A4003BB573 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				48B1A965200344B2003BB573 /* EmailUpdaterMock.swift */,
+				48B1A969200349F1003BB573 /* AccessTokenRefresherMock.swift */,
+				48B1A96D20034B24003BB573 /* RegistrarMock.swift */,
+				48B1A97320035031003BB573 /* SignInMock.swift */,
+				4848403B2003D7790020D1AB /* SignOutMock.swift */,
+				4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		48E1CDD02002708C00A1FED1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +288,8 @@
 		48E8005B200136CC00F5D902 /* ChikaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				48B1A964200344A4003BB573 /* Mock */,
+				48B1A95F20034431003BB573 /* Auth */,
 				48E8005E200136CC00F5D902 /* Info.plist */,
 			);
 			path = ChikaCoreTests;
@@ -342,6 +394,7 @@
 					};
 					48E80056200136CC00F5D902 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -425,6 +478,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B1A96C20034A08003BB573 /* AccessTokenRefresherOperationTests.swift in Sources */,
+				4848403C2003D7790020D1AB /* SignOutMock.swift in Sources */,
+				484840422003D9560020D1AB /* PasswordUpdaterOperationTests.swift in Sources */,
+				48B1A97220035019003BB573 /* SignInOperationTests.swift in Sources */,
+				48B1A96A200349F1003BB573 /* AccessTokenRefresherMock.swift in Sources */,
+				48B1A966200344B2003BB573 /* EmailUpdaterMock.swift in Sources */,
+				48B1A97020034B53003BB573 /* RegistrarOperationTests.swift in Sources */,
+				48B1A97420035031003BB573 /* SignInMock.swift in Sources */,
+				4848403E2003D7C80020D1AB /* SignOutOperationTests.swift in Sources */,
+				48B1A96320034464003BB573 /* EmailUpdaterOperationTests.swift in Sources */,
+				48B1A96E20034B24003BB573 /* RegistrarMock.swift in Sources */,
+				484840402003D90E0020D1AB /* PasswordUpdaterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,12 +666,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
 				INFOPLIST_FILE = ChikaCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nir.ChikaCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,6 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WBRGV5Z9M;
 				INFOPLIST_FILE = ChikaCoreTests/Info.plist;
