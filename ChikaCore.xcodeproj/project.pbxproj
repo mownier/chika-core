@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		48A9F6B32001EB85003A4168 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B22001EB85003A4168 /* Error.swift */; };
 		48A9F6B62001EC35003A4168 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B52001EC35003A4168 /* Result.swift */; };
-		48A9F6B82001ECC0003A4168 /* SignInTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignInTask.swift */; };
-		48A9F6BA2001F384003A4168 /* RegisterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B92001F384003A4168 /* RegisterTask.swift */; };
-		48A9F6BC2001F499003A4168 /* SignOutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BB2001F499003A4168 /* SignOutTask.swift */; };
-		48A9F6BE2001F665003A4168 /* RefreshTokenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */; };
-		48A9F6C02001F7AE003A4168 /* ChangeEmailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */; };
-		48A9F6C22001F9CB003A4168 /* ChangePasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */; };
+		48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignIn.swift */; };
+		48A9F6BA2001F384003A4168 /* Registrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B92001F384003A4168 /* Registrar.swift */; };
+		48A9F6BC2001F499003A4168 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BB2001F499003A4168 /* SignOut.swift */; };
+		48A9F6BE2001F665003A4168 /* AccessTokenRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BD2001F665003A4168 /* AccessTokenRefresher.swift */; };
+		48A9F6C02001F7AE003A4168 /* EmailUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6BF2001F7AE003A4168 /* EmailUpdater.swift */; };
+		48A9F6C22001F9CB003A4168 /* PasswordUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C12001F9CB003A4168 /* PasswordUpdater.swift */; };
 		48A9F6C8200208E4003A4168 /* InboxQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C7200208E4003A4168 /* InboxQuery.swift */; };
 		48A9F6CA20020C87003A4168 /* ChatMessageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C920020C87003A4168 /* ChatMessageQuery.swift */; };
 		48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A951200327E4003BB573 /* MessageCreator.swift */; };
@@ -56,12 +56,12 @@
 /* Begin PBXFileReference section */
 		48A9F6B22001EB85003A4168 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		48A9F6B52001EC35003A4168 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		48A9F6B72001ECC0003A4168 /* SignInTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTask.swift; sourceTree = "<group>"; };
-		48A9F6B92001F384003A4168 /* RegisterTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTask.swift; sourceTree = "<group>"; };
-		48A9F6BB2001F499003A4168 /* SignOutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutTask.swift; sourceTree = "<group>"; };
-		48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenTask.swift; sourceTree = "<group>"; };
-		48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailTask.swift; sourceTree = "<group>"; };
-		48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTask.swift; sourceTree = "<group>"; };
+		48A9F6B72001ECC0003A4168 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		48A9F6B92001F384003A4168 /* Registrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrar.swift; sourceTree = "<group>"; };
+		48A9F6BB2001F499003A4168 /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
+		48A9F6BD2001F665003A4168 /* AccessTokenRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRefresher.swift; sourceTree = "<group>"; };
+		48A9F6BF2001F7AE003A4168 /* EmailUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUpdater.swift; sourceTree = "<group>"; };
+		48A9F6C12001F9CB003A4168 /* PasswordUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUpdater.swift; sourceTree = "<group>"; };
 		48A9F6C7200208E4003A4168 /* InboxQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxQuery.swift; sourceTree = "<group>"; };
 		48A9F6C920020C87003A4168 /* ChatMessageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageQuery.swift; sourceTree = "<group>"; };
 		48B1A951200327E4003BB573 /* MessageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCreator.swift; sourceTree = "<group>"; };
@@ -115,12 +115,12 @@
 		48A9F6B02001EA88003A4168 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				48A9F6BF2001F7AE003A4168 /* ChangeEmailTask.swift */,
-				48A9F6BD2001F665003A4168 /* RefreshTokenTask.swift */,
-				48A9F6B92001F384003A4168 /* RegisterTask.swift */,
-				48A9F6B72001ECC0003A4168 /* SignInTask.swift */,
-				48A9F6BB2001F499003A4168 /* SignOutTask.swift */,
-				48A9F6C12001F9CB003A4168 /* ChangePasswordTask.swift */,
+				48A9F6BF2001F7AE003A4168 /* EmailUpdater.swift */,
+				48A9F6BD2001F665003A4168 /* AccessTokenRefresher.swift */,
+				48A9F6B92001F384003A4168 /* Registrar.swift */,
+				48A9F6B72001ECC0003A4168 /* SignIn.swift */,
+				48A9F6BB2001F499003A4168 /* SignOut.swift */,
+				48A9F6C12001F9CB003A4168 /* PasswordUpdater.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -386,11 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A9F6B82001ECC0003A4168 /* SignInTask.swift in Sources */,
+				48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */,
 				48E1CDD22002708C00A1FED1 /* PersonSearch.swift in Sources */,
 				48A9F6C8200208E4003A4168 /* InboxQuery.swift in Sources */,
 				48E8007A2001400500F5D902 /* Contact.swift in Sources */,
-				48A9F6BE2001F665003A4168 /* RefreshTokenTask.swift in Sources */,
+				48A9F6BE2001F665003A4168 /* AccessTokenRefresher.swift in Sources */,
 				48E1CDDB2002788500A1FED1 /* PendingContactRequestPerformer.swift in Sources */,
 				48B1A95C200332D1003BB573 /* TypingSwitcher.swift in Sources */,
 				48E1CDC4200266BA00A1FED1 /* ChatQuery.swift in Sources */,
@@ -399,7 +399,7 @@
 				48E1CDD7200272BC00A1FED1 /* ChatUpdater.swift in Sources */,
 				48E1CDCA20026B4A00A1FED1 /* RecentChatMessageQuery.swift in Sources */,
 				48E800722001387200F5D902 /* Message.swift in Sources */,
-				48A9F6C02001F7AE003A4168 /* ChangeEmailTask.swift in Sources */,
+				48A9F6C02001F7AE003A4168 /* EmailUpdater.swift in Sources */,
 				48E8006C2001372100F5D902 /* Auth.swift in Sources */,
 				48E1CDD52002711C00A1FED1 /* ChatCreator.swift in Sources */,
 				48E8006E2001382900F5D902 /* Chat.swift in Sources */,
@@ -412,10 +412,10 @@
 				48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */,
 				48B1A954200329AE003BB573 /* PersonUpdater.swift in Sources */,
 				48E8007C200141E300F5D902 /* Presence.swift in Sources */,
-				48A9F6BA2001F384003A4168 /* RegisterTask.swift in Sources */,
+				48A9F6BA2001F384003A4168 /* Registrar.swift in Sources */,
 				48A9F6B32001EB85003A4168 /* Error.swift in Sources */,
-				48A9F6BC2001F499003A4168 /* SignOutTask.swift in Sources */,
-				48A9F6C22001F9CB003A4168 /* ChangePasswordTask.swift in Sources */,
+				48A9F6BC2001F499003A4168 /* SignOut.swift in Sources */,
+				48A9F6C22001F9CB003A4168 /* PasswordUpdater.swift in Sources */,
 				48E1CDC620026A1F00A1FED1 /* MessageQuery.swift in Sources */,
 				48E1CDCC20026CDC00A1FED1 /* ContactQuery.swift in Sources */,
 			);
