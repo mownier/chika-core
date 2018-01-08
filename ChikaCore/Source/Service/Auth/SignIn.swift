@@ -45,6 +45,12 @@ public class SignInOperation: SignInOperator {
     }
     
     public func signIn(using task: SignIn) -> Bool {
+        defer {
+            email = nil
+            password = nil
+            completion = nil
+        }
+        
         guard email != nil, password != nil else {
             return false
         }
@@ -53,9 +59,7 @@ public class SignInOperation: SignInOperator {
         let ok = task.signIn(withEmail: email!, password: password!) { result in
             callback?(result)
         }
-        email = nil
-        password = nil
-        completion = nil
+
         return ok
     }
 }
