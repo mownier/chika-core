@@ -26,17 +26,14 @@ class EmailUpdaterOperationTests: XCTestCase {
         ok = operation.withCurrentPassword("me12345").updateEmail(using: updater)
         XCTAssertFalse(ok)
         
-        ok = operation.withNewEmail("me12345").withCurrentEmail("me@me.com").updateEmail(using: updater)
+        ok = operation.withNewEmail("you@you.com").withCurrentEmail("me@me.com").updateEmail(using: updater)
         XCTAssertFalse(ok)
         
-        ok = operation.withNewEmail("me12345").withCurrentPassword("me12345").updateEmail(using: updater)
+        ok = operation.withNewEmail("you@you.com").withCurrentPassword("me12345").updateEmail(using: updater)
         XCTAssertFalse(ok)
         
-        ok = operation.withCurrentEmail("me12345").withCurrentPassword("me12345").updateEmail(using: updater)
+        ok = operation.withCurrentEmail("me@me.com").withCurrentPassword("me12345").updateEmail(using: updater)
         XCTAssertFalse(ok)
-        
-        ok = operation.withNewEmail("you@you.com").withCurrentEmail("me@me.com").withCurrentPassword("me12345").withCompletion({ _ in
-        }).updateEmail(using: updater)
     }
     
     func testUpdateEmailB() {
