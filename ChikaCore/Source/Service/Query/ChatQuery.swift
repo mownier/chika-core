@@ -21,11 +21,10 @@ public protocol ChatQueryOperator {
 
 public class ChatQueryOperation: ChatQueryOperator {
     
-    var chatIDs: [ID]
+    var chatIDs: [ID]?
     var completion: ((Result<[Chat]>) -> Void)?
     
     public init() {
-        self.chatIDs = []
     }
     
     public func withChatIDs(_ aChatIDs: [ID]) -> ChatQueryOperator {
@@ -39,11 +38,20 @@ public class ChatQueryOperation: ChatQueryOperator {
     }
     
     public func getChats(using query: ChatQuery) -> Bool {
-        let ok = query.getChats(for: chatIDs) { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            chatIDs?.removeAll()
+            chatIDs = nil
+            completion = nil
         }
-        chatIDs.removeAll()
+        
+        guard chatIDs != nil else {
+            return false
+        }
+        
+        let callback = completion
+        let ok = query.getChats(for: chatIDs!) { result in
+            callback?(result)
+        }
         return ok
     }
 }
