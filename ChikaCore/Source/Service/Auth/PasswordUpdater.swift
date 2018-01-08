@@ -52,6 +52,13 @@ public class PasswordUpdaterOperation: PasswordUpdaterOperator {
     }
     
     public func updatePassword(using updater: PasswordUpdater) -> Bool {
+        defer {
+            completion = nil
+            newPassword = nil
+            currentEmail = nil
+            currentPassword = nil
+        }
+        
         guard newPassword != nil, currentEmail != nil, currentPassword != nil else {
             return false
         }
@@ -60,10 +67,6 @@ public class PasswordUpdaterOperation: PasswordUpdaterOperator {
         let ok = updater.updatePassword(withNew: newPassword!, currentPassword: currentPassword!, currentEmail: currentEmail!) { result in
             callback?(result)
         }
-        completion = nil
-        newPassword = nil
-        currentEmail = nil
-        currentPassword = nil
         return ok
     }
 }
