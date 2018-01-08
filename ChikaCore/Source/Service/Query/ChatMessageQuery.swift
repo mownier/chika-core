@@ -40,6 +40,7 @@ public class ChatMessageQueryOperation: ChatMessageQueryOperator {
     public func getMessages(using query: ChatMessageQuery) -> Bool {
         defer {
             chatID = nil
+            completion = nil
         }
         
         guard chatID != nil else {
