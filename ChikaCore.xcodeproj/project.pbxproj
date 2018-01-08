@@ -33,7 +33,6 @@
 		48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD82002785C00A1FED1 /* ContactRequestSender.swift */; };
 		48E1CDDB2002788500A1FED1 /* PendingContactRequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDDA2002788500A1FED1 /* PendingContactRequestPerformer.swift */; };
 		48E80058200136CC00F5D902 /* ChikaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E8004E200136CC00F5D902 /* ChikaCore.framework */; };
-		48E8005D200136CC00F5D902 /* ChikaCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8005C200136CC00F5D902 /* ChikaCoreTests.swift */; };
 		48E8005F200136CC00F5D902 /* ChikaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E80051200136CC00F5D902 /* ChikaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48E8006C2001372100F5D902 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8006B2001372100F5D902 /* Auth.swift */; };
 		48E8006E2001382900F5D902 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E8006D2001382900F5D902 /* Chat.swift */; };
@@ -84,7 +83,6 @@
 		48E80051200136CC00F5D902 /* ChikaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChikaCore.h; sourceTree = "<group>"; };
 		48E80052200136CC00F5D902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E80057200136CC00F5D902 /* ChikaCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChikaCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		48E8005C200136CC00F5D902 /* ChikaCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChikaCoreTests.swift; sourceTree = "<group>"; };
 		48E8005E200136CC00F5D902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E8006B2001372100F5D902 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		48E8006D2001382900F5D902 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 		48E8005B200136CC00F5D902 /* ChikaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				48E8005C200136CC00F5D902 /* ChikaCoreTests.swift */,
 				48E8005E200136CC00F5D902 /* Info.plist */,
 			);
 			path = ChikaCoreTests;
@@ -428,7 +425,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48E8005D200136CC00F5D902 /* ChikaCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
