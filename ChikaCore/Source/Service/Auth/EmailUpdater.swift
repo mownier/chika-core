@@ -53,6 +53,7 @@ public class EmailUpdaterOperation: EmailUpdaterOperator {
     
     public func updateEmail(using updater: EmailUpdater) -> Bool {
         guard newEmail != nil, currentEmail != nil, currentPassword != nil else {
+            cleanUp()
             return false
         }
         
@@ -60,10 +61,14 @@ public class EmailUpdaterOperation: EmailUpdaterOperator {
         let ok = updater.updateEmail(withNew: newEmail!, currentEmail: currentEmail!, currentPassword: currentPassword!) { result in
             callback?(result)
         }
+        cleanUp()
+        return ok
+    }
+    
+    func cleanUp() {
         newEmail = nil
         completion = nil
         currentEmail = nil
         currentPassword = nil
-        return ok
     }
 }
