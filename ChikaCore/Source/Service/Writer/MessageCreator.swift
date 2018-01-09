@@ -52,6 +52,13 @@ public class MessageCreatorOperation: MessageCreatorOperator {
     }
     
     public func createMessage(using creator: MessageCreator) -> Bool {
+        defer {
+            chatID = nil
+            content = nil
+            completion = nil
+            participantIDs = nil
+        }
+        
         guard chatID != nil, content != nil, participantIDs != nil else {
             return false
         }
@@ -60,10 +67,6 @@ public class MessageCreatorOperation: MessageCreatorOperator {
         let ok = creator.createMessage(for: chatID!, participantIDs: participantIDs!, content: content!) { result in
             callback?(result)
         }
-        chatID = nil
-        content = nil
-        completion = nil
-        participantIDs = nil
         return ok
     }
 }
