@@ -1,0 +1,22 @@
+language: swift
+
+osx_image: xcode9
+
+branches:
+  only:
+    - master
+
+env:
+  - LC_TYPE=en_US.UTF-8 LANG=en_US.UTF-8
+
+before_install:
+  - gem install xcpretty -N
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+script:
+  - set -o pipefail
+  - xcodebuild build test -project ChikaCore.xcodeproj -scheme ChikaCore -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone SE" | xcpretty -c
+
+
