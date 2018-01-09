@@ -14,13 +14,13 @@ public enum TypingStatus {
 
 public protocol TypingSwitcher {
     
-    func switchTypingStatus(_ status: TypingStatus, for chatID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
+    func switchTypingStatus(to status: TypingStatus, for chatID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
 }
 
 public protocol TypingSwitcherOperator {
     
     func withChatID(_ id: ID) -> TypingSwitcherOperator
-    func withStatus(_ status: TypingStatus) -> TypingSwitcherOperator
+    func withNewStatus(_ status: TypingStatus) -> TypingSwitcherOperator
     func withCompletion(_ completion: @escaping (Result<OK>) -> Void) -> TypingSwitcherOperator
     
     func switchTypingStatus(using switcher: TypingSwitcher) -> Bool
@@ -29,7 +29,7 @@ public protocol TypingSwitcherOperator {
 public class TypingSwitcherOperation: TypingSwitcherOperator {
     
     var chatID: ID?
-    var status: TypingStatus?
+    var newStatus: TypingStatus?
     var completion: ((Result<OK>) -> Void)?
     
     public init() {
@@ -40,8 +40,8 @@ public class TypingSwitcherOperation: TypingSwitcherOperator {
         return self
     }
     
-    public func withStatus(_ aStatus: TypingStatus) -> TypingSwitcherOperator {
-        status = aStatus
+    public func withNewStatus(_ status: TypingStatus) -> TypingSwitcherOperator {
+        newStatus = status
         return self
     }
     
@@ -51,17 +51,20 @@ public class TypingSwitcherOperation: TypingSwitcherOperator {
     }
     
     public func switchTypingStatus(using switcher: TypingSwitcher) -> Bool {
-        guard chatID != nil, status != nil else {
+        defer {
+            chatID = nil
+            newStatus = nil
+            completion = nil
+        }
+        
+        guard chatID != nil, newStatus != nil else {
             return false
         }
         
         let callback = completion
-        let ok = switcher.switchTypingStatus(status!, for: chatID!) { result in
+        let ok = switcher.switchTypingStatus(to: newStatus!, for: chatID!) { result in
             callback?(result)
         }
-        chatID = nil
-        status = nil
-        completion = nil
         return ok
     }
 }
