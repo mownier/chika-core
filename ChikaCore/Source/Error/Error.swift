@@ -23,6 +23,6 @@ public struct Error: Swift.Error, Hashable, CustomStringConvertible {
     }
     
     public static func ==(lhs: Error, rhs: Error) -> Bool {
-        return lhs.message == rhs.message
+        return lhs.message.lowercased() == rhs.message.lowercased()
     }
 }
