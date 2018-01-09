@@ -21,11 +21,10 @@ public protocol RecentChatMessageOperator {
 
 public class RecentChatMessageOperation: RecentChatMessageOperator {
     
-    var chatID: ID
+    var chatID: ID?
     var completion: ((Result<Message>) -> Void)?
     
     public init() {
-        self.chatID = ID("")
     }
     
     public func withChatID(_ id: ID) -> RecentChatMessageOperator {
@@ -39,11 +38,19 @@ public class RecentChatMessageOperation: RecentChatMessageOperator {
     }
     
     public func getRecentChatMessage(using query: RecentChatMessageQuery) -> Bool {
-        let ok = query.getRecentChatMessage(of: chatID) { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            chatID = nil
+            completion = nil
         }
-        chatID = ID("")
+        
+        guard chatID != nil else {
+            return false
+        }
+        
+        let callback = completion
+        let ok = query.getRecentChatMessage(of: chatID!) { result in
+            callback?(result)
+        }
         return ok
     }
 }
