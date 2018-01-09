@@ -27,6 +27,8 @@
 		4872A09920048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09820048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift */; };
 		4872A09B20048FA30088F130 /* PersonSearchMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09A20048FA30088F130 /* PersonSearchMock.swift */; };
 		4872A09E20048FEF0088F130 /* PersonSearchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */; };
+		4872A0A1200491F10088F130 /* ChatCreatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A0A0200491F10088F130 /* ChatCreatorMock.swift */; };
+		4872A0A5200493A80088F130 /* ChatCreatorOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A0A4200493A80088F130 /* ChatCreatorOperationTests.swift */; };
 		48A9F6B32001EB85003A4168 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B22001EB85003A4168 /* Error.swift */; };
 		48A9F6B62001EC35003A4168 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B52001EC35003A4168 /* Result.swift */; };
 		48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignIn.swift */; };
@@ -50,6 +52,8 @@
 		48B1A97020034B53003BB573 /* RegistrarOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A96F20034B53003BB573 /* RegistrarOperationTests.swift */; };
 		48B1A97220035019003BB573 /* SignInOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A97120035019003BB573 /* SignInOperationTests.swift */; };
 		48B1A97420035031003BB573 /* SignInMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A97320035031003BB573 /* SignInMock.swift */; };
+		48B296A42004FFA90007ECEE /* ChatTitleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B296A32004FFA90007ECEE /* ChatTitleUpdater.swift */; };
+		48B296A8200503AF0007ECEE /* AddChatParticipantsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B296A7200503AF0007ECEE /* AddChatParticipantsAction.swift */; };
 		48E1CDC4200266BA00A1FED1 /* ChatQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC3200266BA00A1FED1 /* ChatQuery.swift */; };
 		48E1CDC620026A1F00A1FED1 /* MessageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC520026A1F00A1FED1 /* MessageQuery.swift */; };
 		48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDC720026AB400A1FED1 /* PersonQuery.swift */; };
@@ -57,7 +61,6 @@
 		48E1CDCC20026CDC00A1FED1 /* ContactQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDCB20026CDC00A1FED1 /* ContactQuery.swift */; };
 		48E1CDD22002708C00A1FED1 /* PersonSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD12002708C00A1FED1 /* PersonSearch.swift */; };
 		48E1CDD52002711C00A1FED1 /* ChatCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD42002711C00A1FED1 /* ChatCreator.swift */; };
-		48E1CDD7200272BC00A1FED1 /* ChatUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD6200272BC00A1FED1 /* ChatUpdater.swift */; };
 		48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDD82002785C00A1FED1 /* ContactRequestSender.swift */; };
 		48E1CDDB2002788500A1FED1 /* PendingContactRequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1CDDA2002788500A1FED1 /* PendingContactRequestPerformer.swift */; };
 		48E80058200136CC00F5D902 /* ChikaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E8004E200136CC00F5D902 /* ChikaCore.framework */; };
@@ -102,6 +105,8 @@
 		4872A09820048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageQueryOperationTests.swift; sourceTree = "<group>"; };
 		4872A09A20048FA30088F130 /* PersonSearchMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchMock.swift; sourceTree = "<group>"; };
 		4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchOperationTests.swift; sourceTree = "<group>"; };
+		4872A0A0200491F10088F130 /* ChatCreatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCreatorMock.swift; sourceTree = "<group>"; };
+		4872A0A4200493A80088F130 /* ChatCreatorOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCreatorOperationTests.swift; sourceTree = "<group>"; };
 		48A9F6B22001EB85003A4168 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		48A9F6B52001EC35003A4168 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		48A9F6B72001ECC0003A4168 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -125,6 +130,8 @@
 		48B1A96F20034B53003BB573 /* RegistrarOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarOperationTests.swift; sourceTree = "<group>"; };
 		48B1A97120035019003BB573 /* SignInOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOperationTests.swift; sourceTree = "<group>"; };
 		48B1A97320035031003BB573 /* SignInMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMock.swift; sourceTree = "<group>"; };
+		48B296A32004FFA90007ECEE /* ChatTitleUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleUpdater.swift; sourceTree = "<group>"; };
+		48B296A7200503AF0007ECEE /* AddChatParticipantsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChatParticipantsAction.swift; sourceTree = "<group>"; };
 		48E1CDC3200266BA00A1FED1 /* ChatQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatQuery.swift; sourceTree = "<group>"; };
 		48E1CDC520026A1F00A1FED1 /* MessageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageQuery.swift; sourceTree = "<group>"; };
 		48E1CDC720026AB400A1FED1 /* PersonQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonQuery.swift; sourceTree = "<group>"; };
@@ -132,7 +139,6 @@
 		48E1CDCB20026CDC00A1FED1 /* ContactQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactQuery.swift; sourceTree = "<group>"; };
 		48E1CDD12002708C00A1FED1 /* PersonSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSearch.swift; sourceTree = "<group>"; };
 		48E1CDD42002711C00A1FED1 /* ChatCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCreator.swift; sourceTree = "<group>"; };
-		48E1CDD6200272BC00A1FED1 /* ChatUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUpdater.swift; sourceTree = "<group>"; };
 		48E1CDD82002785C00A1FED1 /* ContactRequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestSender.swift; sourceTree = "<group>"; };
 		48E1CDDA2002788500A1FED1 /* PendingContactRequestPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingContactRequestPerformer.swift; sourceTree = "<group>"; };
 		48E8004E200136CC00F5D902 /* ChikaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChikaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +194,14 @@
 				4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		4872A09F200491CD0088F130 /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				4872A0A4200493A80088F130 /* ChatCreatorOperationTests.swift */,
+			);
+			path = Writer;
 			sourceTree = "<group>";
 		};
 		48A9F6B02001EA88003A4168 /* Auth */ = {
@@ -278,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				48B1A969200349F1003BB573 /* AccessTokenRefresherMock.swift */,
+				4872A0A0200491F10088F130 /* ChatCreatorMock.swift */,
 				484840482003DC670020D1AB /* ChatMessageQueryMock.swift */,
 				4848404A2003E02E0020D1AB /* ChatQueryMock.swift */,
 				4872A0882004845C0088F130 /* ContactQueryMock.swift */,
@@ -306,8 +321,9 @@
 		48E1CDD3200270F100A1FED1 /* Writer */ = {
 			isa = PBXGroup;
 			children = (
+				48B296A7200503AF0007ECEE /* AddChatParticipantsAction.swift */,
 				48E1CDD42002711C00A1FED1 /* ChatCreator.swift */,
-				48E1CDD6200272BC00A1FED1 /* ChatUpdater.swift */,
+				48B296A32004FFA90007ECEE /* ChatTitleUpdater.swift */,
 				48E1CDD82002785C00A1FED1 /* ContactRequestSender.swift */,
 				48B1A951200327E4003BB573 /* MessageCreator.swift */,
 				48E1CDDA2002788500A1FED1 /* PendingContactRequestPerformer.swift */,
@@ -350,11 +366,12 @@
 		48E8005B200136CC00F5D902 /* ChikaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				48B1A95F20034431003BB573 /* Auth */,
 				48E8005E200136CC00F5D902 /* Info.plist */,
+				48B1A95F20034431003BB573 /* Auth */,
 				48B1A964200344A4003BB573 /* Mock */,
 				484840432003DBE60020D1AB /* Query */,
 				4872A09C20048FCB0088F130 /* Search */,
+				4872A09F200491CD0088F130 /* Writer */,
 			);
 			path = ChikaCoreTests;
 			sourceTree = "<group>";
@@ -513,7 +530,6 @@
 				48E1CDC4200266BA00A1FED1 /* ChatQuery.swift in Sources */,
 				48E8007620013D4A00F5D902 /* Unique.swift in Sources */,
 				48E800702001385B00F5D902 /* Person.swift in Sources */,
-				48E1CDD7200272BC00A1FED1 /* ChatUpdater.swift in Sources */,
 				48E1CDCA20026B4A00A1FED1 /* RecentChatMessageQuery.swift in Sources */,
 				48E800722001387200F5D902 /* Message.swift in Sources */,
 				48A9F6C02001F7AE003A4168 /* EmailUpdater.swift in Sources */,
@@ -524,6 +540,7 @@
 				48A9F6B62001EC35003A4168 /* Result.swift in Sources */,
 				48B1A95820032F11003BB573 /* PresenceSwitcher.swift in Sources */,
 				48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */,
+				48B296A8200503AF0007ECEE /* AddChatParticipantsAction.swift in Sources */,
 				48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */,
 				48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */,
 				48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */,
@@ -531,6 +548,7 @@
 				48E8007C200141E300F5D902 /* Presence.swift in Sources */,
 				48A9F6BA2001F384003A4168 /* Registrar.swift in Sources */,
 				48A9F6B32001EB85003A4168 /* Error.swift in Sources */,
+				48B296A42004FFA90007ECEE /* ChatTitleUpdater.swift in Sources */,
 				48A9F6BC2001F499003A4168 /* SignOut.swift in Sources */,
 				48A9F6C22001F9CB003A4168 /* PasswordUpdater.swift in Sources */,
 				48E1CDC620026A1F00A1FED1 /* MessageQuery.swift in Sources */,
@@ -554,10 +572,12 @@
 				48B1A96A200349F1003BB573 /* AccessTokenRefresherMock.swift in Sources */,
 				4872A08F200488510088F130 /* MessageQueryOperationTests.swift in Sources */,
 				48B1A966200344B2003BB573 /* EmailUpdaterMock.swift in Sources */,
+				4872A0A5200493A80088F130 /* ChatCreatorOperationTests.swift in Sources */,
 				4848404B2003E02E0020D1AB /* ChatQueryMock.swift in Sources */,
 				4872A091200488820088F130 /* MessageQueryMock.swift in Sources */,
 				48B1A97020034B53003BB573 /* RegistrarOperationTests.swift in Sources */,
 				4872A09320048A610088F130 /* PersonQueryMock.swift in Sources */,
+				4872A0A1200491F10088F130 /* ChatCreatorMock.swift in Sources */,
 				48B1A97420035031003BB573 /* SignInMock.swift in Sources */,
 				4872A09B20048FA30088F130 /* PersonSearchMock.swift in Sources */,
 				4872A087200484470088F130 /* ContactQueryOperationTests.swift in Sources */,
