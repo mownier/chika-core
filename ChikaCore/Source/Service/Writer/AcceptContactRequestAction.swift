@@ -1,25 +1,25 @@
 //
-//  AccepContactRequestAction.swift
+//  AcceptContactRequestAction.swift
 //  ChikaCore
 //
 //  Created by Mounir Ybanez on 1/9/18.
 //  Copyright © 2018 Nir. All rights reserved.
 //
 
-public protocol AccepContactRequestAction {
+public protocol AcceptContactRequestAction {
 
     func acceptContactRequest(withID id: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
 }
 
-public protocol AccepContactRequestActionOperator {
+public protocol AcceptContactRequestActionOperator {
     
-    func withCompletion(_ completion: @escaping (Result<OK>) -> Void)  -> AccepContactRequestActionOperator
-    func withContactRequestID(_ id: ID) -> AccepContactRequestActionOperator
+    func withCompletion(_ completion: @escaping (Result<OK>) -> Void)  -> AcceptContactRequestActionOperator
+    func withContactRequestID(_ id: ID) -> AcceptContactRequestActionOperator
     
-    func acceptContactRequest(using action: AccepContactRequestAction) -> Bool
+    func acceptContactRequest(using action: AcceptContactRequestAction) -> Bool
 }
 
-public class AccepContactRequestActionOperation: AccepContactRequestActionOperator {
+public class AcceptContactRequestActionOperation: AcceptContactRequestActionOperator {
     
     var completion: ((Result<OK>) -> Void)?
     var contactRequestID: ID?
@@ -27,17 +27,17 @@ public class AccepContactRequestActionOperation: AccepContactRequestActionOperat
     public init() {
     }
     
-    public func withCompletion(_ aCompletion: @escaping (Result<OK>) -> Void) -> AccepContactRequestActionOperator {
+    public func withCompletion(_ aCompletion: @escaping (Result<OK>) -> Void) -> AcceptContactRequestActionOperator {
         completion = aCompletion
         return self
     }
     
-    public func withContactRequestID(_ id: ID) -> AccepContactRequestActionOperator {
+    public func withContactRequestID(_ id: ID) -> AcceptContactRequestActionOperator {
         contactRequestID = id
         return self
     }
     
-    public func acceptContactRequest(using action: AccepContactRequestAction) -> Bool {
+    public func acceptContactRequest(using action: AcceptContactRequestAction) -> Bool {
         defer {
             completion = nil
             contactRequestID = nil
