@@ -21,11 +21,10 @@ public protocol PersonQueryOperator {
 
 public class PersonQueryOperation: PersonQueryOperator {
     
-    var personIDs: [ID]
+    var personIDs: [ID]?
     var completion: ((Result<[Person]>) -> Void)?
     
     public init() {
-        self.personIDs = []
     }
     
     public func withPersonIDs(_ aPersonIDs: [ID]) -> PersonQueryOperator {
@@ -39,11 +38,20 @@ public class PersonQueryOperation: PersonQueryOperator {
     }
     
     public func getPersons(using query: PersonQuery) -> Bool {
-        let ok = query.getPersons(for: personIDs) { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            personIDs?.removeAll()
+            personIDs = nil
+            completion = nil
         }
-        personIDs.removeAll()
+        
+        guard personIDs != nil else {
+            return false
+        }
+        
+        let callback = completion
+        let ok = query.getPersons(for: personIDs!) { result in
+            callback?(result)
+        }
         return ok
     }
 }
