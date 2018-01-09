@@ -21,11 +21,10 @@ public protocol MessageQueryOperator {
 
 public class MessageQueryOperation: MessageQueryOperator {
     
-    var messageIDs: [ID]
+    var messageIDs: [ID]?
     var completion: ((Result<[Message]>) -> Void)?
     
     public init() {
-        self.messageIDs = []
     }
     
     public func withMessageIDs(_ aMessageIDs: [ID]) -> MessageQueryOperator {
@@ -39,11 +38,20 @@ public class MessageQueryOperation: MessageQueryOperator {
     }
     
     public func getMessages(using query: MessageQuery) -> Bool {
-        let ok = query.getMessages(for: messageIDs) { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            messageIDs?.removeAll()
+            messageIDs = nil
+            completion = nil
         }
-        messageIDs.removeAll()
+        
+        guard messageIDs != nil else {
+            return false
+        }
+        
+        let callback = completion
+        let ok = query.getMessages(for: messageIDs!) { result in
+            callback?(result)
+        }
         return ok
     }
 }
