@@ -21,11 +21,10 @@ public protocol PersonSearchOperator {
 
 public class PersonSearchOperation: PersonSearchOperator {
     
-    var keyword: String
+    var keyword: String?
     var completion: ((Result<[Person.SearchObject]>) -> Void)?
     
     public init() {
-        self.keyword = ""
     }
     
     public func withKeyword(_ aKeyword: String) -> PersonSearchOperator {
@@ -39,12 +38,19 @@ public class PersonSearchOperation: PersonSearchOperator {
     }
     
     public func searchPersons(using search: PersonSearch) -> Bool {
-        let ok = search.searchPersons(withKeyword: keyword) { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            keyword = nil
+            completion = nil
         }
-        keyword = ""
-        return ok
+        
+        guard keyword != nil else {
+            return false
+        }
+        
+        let callback = completion
+        return search.searchPersons(withKeyword: keyword!) { result in
+            callback?(result)
+        }
     }
 }
 
