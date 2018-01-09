@@ -26,9 +26,13 @@ public class InboxQueryOperation: InboxQueryOperator {
     }
     
     public func getInbox(using query: InboxQuery) -> Bool {
-        return query.getInbox { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            completion = nil
+        }
+        
+        let callback = completion
+        return query.getInbox { result in
+            callback?(result)
         }
     }
     
