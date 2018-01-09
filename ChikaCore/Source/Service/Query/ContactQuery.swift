@@ -31,9 +31,13 @@ public class ContactQueryOperation: ContactQueryOperator {
     }
     
     public func getContacts(using query: ContactQuery) -> Bool {
-        return query.getContacts { [weak self] result in
-            self?.completion?(result)
-            self?.completion = nil
+        defer {
+            completion = nil
+        }
+        
+        let callback = completion
+        return query.getContacts { result in
+            callback?(result)
         }
     }
 }
