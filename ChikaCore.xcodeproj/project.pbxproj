@@ -25,6 +25,8 @@
 		4872A09520048AB80088F130 /* PersonQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09420048AB80088F130 /* PersonQueryOperationTests.swift */; };
 		4872A09720048D2D0088F130 /* RecentChatMessageQueryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09620048D2D0088F130 /* RecentChatMessageQueryMock.swift */; };
 		4872A09920048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09820048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift */; };
+		4872A09B20048FA30088F130 /* PersonSearchMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09A20048FA30088F130 /* PersonSearchMock.swift */; };
+		4872A09E20048FEF0088F130 /* PersonSearchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */; };
 		48A9F6B32001EB85003A4168 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B22001EB85003A4168 /* Error.swift */; };
 		48A9F6B62001EC35003A4168 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B52001EC35003A4168 /* Result.swift */; };
 		48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6B72001ECC0003A4168 /* SignIn.swift */; };
@@ -98,6 +100,8 @@
 		4872A09420048AB80088F130 /* PersonQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonQueryOperationTests.swift; sourceTree = "<group>"; };
 		4872A09620048D2D0088F130 /* RecentChatMessageQueryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageQueryMock.swift; sourceTree = "<group>"; };
 		4872A09820048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageQueryOperationTests.swift; sourceTree = "<group>"; };
+		4872A09A20048FA30088F130 /* PersonSearchMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchMock.swift; sourceTree = "<group>"; };
+		4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchOperationTests.swift; sourceTree = "<group>"; };
 		48A9F6B22001EB85003A4168 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		48A9F6B52001EC35003A4168 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		48A9F6B72001ECC0003A4168 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -176,6 +180,14 @@
 				4872A09820048D5E0088F130 /* RecentChatMessageQueryOperationTests.swift */,
 			);
 			path = Query;
+			sourceTree = "<group>";
+		};
+		4872A09C20048FCB0088F130 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4872A09D20048FEF0088F130 /* PersonSearchOperationTests.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		48A9F6B02001EA88003A4168 /* Auth */ = {
@@ -274,10 +286,11 @@
 				4872A090200488820088F130 /* MessageQueryMock.swift */,
 				4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */,
 				4872A09220048A610088F130 /* PersonQueryMock.swift */,
+				4872A09A20048FA30088F130 /* PersonSearchMock.swift */,
+				4872A09620048D2D0088F130 /* RecentChatMessageQueryMock.swift */,
 				48B1A96D20034B24003BB573 /* RegistrarMock.swift */,
 				48B1A97320035031003BB573 /* SignInMock.swift */,
 				4848403B2003D7790020D1AB /* SignOutMock.swift */,
-				4872A09620048D2D0088F130 /* RecentChatMessageQueryMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -337,10 +350,11 @@
 		48E8005B200136CC00F5D902 /* ChikaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				48E8005E200136CC00F5D902 /* Info.plist */,
 				48B1A95F20034431003BB573 /* Auth */,
+				48E8005E200136CC00F5D902 /* Info.plist */,
 				48B1A964200344A4003BB573 /* Mock */,
 				484840432003DBE60020D1AB /* Query */,
+				4872A09C20048FCB0088F130 /* Search */,
 			);
 			path = ChikaCoreTests;
 			sourceTree = "<group>";
@@ -545,8 +559,10 @@
 				48B1A97020034B53003BB573 /* RegistrarOperationTests.swift in Sources */,
 				4872A09320048A610088F130 /* PersonQueryMock.swift in Sources */,
 				48B1A97420035031003BB573 /* SignInMock.swift in Sources */,
+				4872A09B20048FA30088F130 /* PersonSearchMock.swift in Sources */,
 				4872A087200484470088F130 /* ContactQueryOperationTests.swift in Sources */,
 				4848403E2003D7C80020D1AB /* SignOutOperationTests.swift in Sources */,
+				4872A09E20048FEF0088F130 /* PersonSearchOperationTests.swift in Sources */,
 				4872A08D200486DE0088F130 /* InboxQueryMock.swift in Sources */,
 				4872A09720048D2D0088F130 /* RecentChatMessageQueryMock.swift in Sources */,
 				4872A08B2004869C0088F130 /* InboxQueryOperationTests.swift in Sources */,
