@@ -45,6 +45,12 @@ public class PersonRegistrarOperation: PersonRegistrarOperator {
     }
     
     public func registerPerson(using registrar: PersonRegistrar) -> Bool {
+        defer {
+            email = nil
+            personID = nil
+            completion = nil
+        }
+        
         guard email != nil, personID != nil else {
             return false
         }
@@ -53,9 +59,6 @@ public class PersonRegistrarOperation: PersonRegistrarOperator {
         let ok = registrar.registerPerson(withID: personID!, email: email!) { result in
             callback?(result)
         }
-        email = nil
-        personID = nil
-        completion = nil
         return ok
     }
 }
