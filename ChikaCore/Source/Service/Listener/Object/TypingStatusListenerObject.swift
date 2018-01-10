@@ -9,18 +9,18 @@
 public struct TypingStatusListenerObject: Hashable {
     
     public internal(set) var status: TypingStatus
-    public internal(set) var personID: ID
+    public internal(set) var person: Person
     
-    public init(personID: ID, status: TypingStatus) {
+    public init(person: Person, status: TypingStatus) {
         self.status = status
-        self.personID = personID
+        self.person = person
     }
     
     public var hashValue: Int {
-        return personID.hashValue
+        return person.hashValue
     }
     
     public static func ==(lhs: TypingStatusListenerObject, rhs: TypingStatusListenerObject) -> Bool {
-        return lhs.personID == rhs.personID
+        return lhs.person == rhs.person
     }
 }
