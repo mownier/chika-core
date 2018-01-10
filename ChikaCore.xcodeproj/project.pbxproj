@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4832509B2005252600957D04 /* PresenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4832509A2005252600957D04 /* PresenceTests.swift */; };
 		4832509E2005259300957D04 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4832509D2005259300957D04 /* ErrorTests.swift */; };
+		483250A320052A9C00957D04 /* ChatTitleUpdateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483250A220052A9C00957D04 /* ChatTitleUpdateListener.swift */; };
+		483250A62005325200957D04 /* ChatTitleUpdateListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483250A52005325200957D04 /* ChatTitleUpdateListenerObject.swift */; };
 		4848403C2003D7790020D1AB /* SignOutMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403B2003D7790020D1AB /* SignOutMock.swift */; };
 		4848403E2003D7C80020D1AB /* SignOutOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403D2003D7C80020D1AB /* SignOutOperationTests.swift */; };
 		484840402003D90E0020D1AB /* PasswordUpdaterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */; };
@@ -51,6 +53,17 @@
 		48A9F6C22001F9CB003A4168 /* PasswordUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C12001F9CB003A4168 /* PasswordUpdater.swift */; };
 		48A9F6C8200208E4003A4168 /* InboxQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C7200208E4003A4168 /* InboxQuery.swift */; };
 		48A9F6CA20020C87003A4168 /* ChatMessageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9F6C920020C87003A4168 /* ChatMessageQuery.swift */; };
+		48ABC9AF2005CB62003E8E1E /* AddedContactListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9AE2005CB62003E8E1E /* AddedContactListener.swift */; };
+		48ABC9B12005CCFA003E8E1E /* RemovedContactListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9B02005CCFA003E8E1E /* RemovedContactListener.swift */; };
+		48ABC9B32005CEAA003E8E1E /* ReceivedContactRequestListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9B22005CEAA003E8E1E /* ReceivedContactRequestListener.swift */; };
+		48ABC9B52005CFCF003E8E1E /* ContactRequestActionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9B42005CFCF003E8E1E /* ContactRequestActionListener.swift */; };
+		48ABC9B72005D147003E8E1E /* PresenceListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9B62005D147003E8E1E /* PresenceListener.swift */; };
+		48ABC9B92005D18F003E8E1E /* PresenceListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9B82005D18F003E8E1E /* PresenceListenerObject.swift */; };
+		48ABC9BB2005D47B003E8E1E /* RecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9BA2005D47B003E8E1E /* RecentChatListener.swift */; };
+		48ABC9BD2005D58E003E8E1E /* RecentChatMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9BC2005D58E003E8E1E /* RecentChatMessageListener.swift */; };
+		48ABC9BF2005D60B003E8E1E /* RecentChatMessageListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9BE2005D60B003E8E1E /* RecentChatMessageListenerObject.swift */; };
+		48ABC9C12005D7DF003E8E1E /* TypingStatusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9C02005D7DF003E8E1E /* TypingStatusListener.swift */; };
+		48ABC9C32005D871003E8E1E /* TypingStatusListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9C22005D871003E8E1E /* TypingStatusListenerObject.swift */; };
 		48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A951200327E4003BB573 /* MessageCreator.swift */; };
 		48B1A954200329AE003BB573 /* PersonUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A953200329AE003BB573 /* PersonUpdater.swift */; };
 		48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95520032D62003BB573 /* PersonRegistrar.swift */; };
@@ -121,6 +134,8 @@
 /* Begin PBXFileReference section */
 		4832509A2005252600957D04 /* PresenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceTests.swift; sourceTree = "<group>"; };
 		4832509D2005259300957D04 /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
+		483250A220052A9C00957D04 /* ChatTitleUpdateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleUpdateListener.swift; sourceTree = "<group>"; };
+		483250A52005325200957D04 /* ChatTitleUpdateListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleUpdateListenerObject.swift; sourceTree = "<group>"; };
 		4848403B2003D7790020D1AB /* SignOutMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutMock.swift; sourceTree = "<group>"; };
 		4848403D2003D7C80020D1AB /* SignOutOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutOperationTests.swift; sourceTree = "<group>"; };
 		4848403F2003D90E0020D1AB /* PasswordUpdaterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUpdaterMock.swift; sourceTree = "<group>"; };
@@ -163,6 +178,17 @@
 		48A9F6C12001F9CB003A4168 /* PasswordUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUpdater.swift; sourceTree = "<group>"; };
 		48A9F6C7200208E4003A4168 /* InboxQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxQuery.swift; sourceTree = "<group>"; };
 		48A9F6C920020C87003A4168 /* ChatMessageQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageQuery.swift; sourceTree = "<group>"; };
+		48ABC9AE2005CB62003E8E1E /* AddedContactListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedContactListener.swift; sourceTree = "<group>"; };
+		48ABC9B02005CCFA003E8E1E /* RemovedContactListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemovedContactListener.swift; sourceTree = "<group>"; };
+		48ABC9B22005CEAA003E8E1E /* ReceivedContactRequestListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedContactRequestListener.swift; sourceTree = "<group>"; };
+		48ABC9B42005CFCF003E8E1E /* ContactRequestActionListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestActionListener.swift; sourceTree = "<group>"; };
+		48ABC9B62005D147003E8E1E /* PresenceListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceListener.swift; sourceTree = "<group>"; };
+		48ABC9B82005D18F003E8E1E /* PresenceListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceListenerObject.swift; sourceTree = "<group>"; };
+		48ABC9BA2005D47B003E8E1E /* RecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatListener.swift; sourceTree = "<group>"; };
+		48ABC9BC2005D58E003E8E1E /* RecentChatMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageListener.swift; sourceTree = "<group>"; };
+		48ABC9BE2005D60B003E8E1E /* RecentChatMessageListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageListenerObject.swift; sourceTree = "<group>"; };
+		48ABC9C02005D7DF003E8E1E /* TypingStatusListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingStatusListener.swift; sourceTree = "<group>"; };
+		48ABC9C22005D871003E8E1E /* TypingStatusListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingStatusListenerObject.swift; sourceTree = "<group>"; };
 		48B1A951200327E4003BB573 /* MessageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCreator.swift; sourceTree = "<group>"; };
 		48B1A953200329AE003BB573 /* PersonUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUpdater.swift; sourceTree = "<group>"; };
 		48B1A95520032D62003BB573 /* PersonRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrar.swift; sourceTree = "<group>"; };
@@ -248,6 +274,34 @@
 				4832509D2005259300957D04 /* ErrorTests.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		4832509F20052A3600957D04 /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				48ABC9AE2005CB62003E8E1E /* AddedContactListener.swift */,
+				483250A220052A9C00957D04 /* ChatTitleUpdateListener.swift */,
+				48ABC9B42005CFCF003E8E1E /* ContactRequestActionListener.swift */,
+				48ABC9B62005D147003E8E1E /* PresenceListener.swift */,
+				48ABC9B22005CEAA003E8E1E /* ReceivedContactRequestListener.swift */,
+				48ABC9BA2005D47B003E8E1E /* RecentChatListener.swift */,
+				48ABC9BC2005D58E003E8E1E /* RecentChatMessageListener.swift */,
+				48ABC9B02005CCFA003E8E1E /* RemovedContactListener.swift */,
+				48ABC9C02005D7DF003E8E1E /* TypingStatusListener.swift */,
+				483250A42005323500957D04 /* Object */,
+			);
+			path = Listener;
+			sourceTree = "<group>";
+		};
+		483250A42005323500957D04 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				483250A52005325200957D04 /* ChatTitleUpdateListenerObject.swift */,
+				48ABC9B82005D18F003E8E1E /* PresenceListenerObject.swift */,
+				48ABC9BE2005D60B003E8E1E /* RecentChatMessageListenerObject.swift */,
+				48ABC9C22005D871003E8E1E /* TypingStatusListenerObject.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 		484840432003DBE60020D1AB /* Query */ = {
@@ -543,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				48A9F6B02001EA88003A4168 /* Auth */,
+				4832509F20052A3600957D04 /* Listener */,
 				48A9F6C620020867003A4168 /* Query */,
 				48E1CDD02002708C00A1FED1 /* Search */,
 				48E1CDD3200270F100A1FED1 /* Writer */,
@@ -665,30 +720,42 @@
 				48A9F6B82001ECC0003A4168 /* SignIn.swift in Sources */,
 				48E1CDD22002708C00A1FED1 /* PersonSearch.swift in Sources */,
 				48A9F6C8200208E4003A4168 /* InboxQuery.swift in Sources */,
+				48ABC9BF2005D60B003E8E1E /* RecentChatMessageListenerObject.swift in Sources */,
 				48E8007A2001400500F5D902 /* Contact.swift in Sources */,
 				48B296CE200517500007ECEE /* OfflinePresenceSwitcher.swift in Sources */,
 				48A9F6BE2001F665003A4168 /* AccessTokenRefresher.swift in Sources */,
+				48ABC9B72005D147003E8E1E /* PresenceListener.swift in Sources */,
+				48ABC9BD2005D58E003E8E1E /* RecentChatMessageListener.swift in Sources */,
 				48B1A95C200332D1003BB573 /* TypingSwitcher.swift in Sources */,
 				48E1CDC4200266BA00A1FED1 /* ChatQuery.swift in Sources */,
 				48E8007620013D4A00F5D902 /* Unique.swift in Sources */,
 				48E800702001385B00F5D902 /* Person.swift in Sources */,
 				48E1CDCA20026B4A00A1FED1 /* RecentChatMessageQuery.swift in Sources */,
 				48E800722001387200F5D902 /* Message.swift in Sources */,
+				48ABC9B52005CFCF003E8E1E /* ContactRequestActionListener.swift in Sources */,
 				48A9F6C02001F7AE003A4168 /* EmailUpdater.swift in Sources */,
 				48E8006C2001372100F5D902 /* Auth.swift in Sources */,
 				48E1CDD52002711C00A1FED1 /* ChatCreator.swift in Sources */,
+				48ABC9B12005CCFA003E8E1E /* RemovedContactListener.swift in Sources */,
+				48ABC9AF2005CB62003E8E1E /* AddedContactListener.swift in Sources */,
+				48ABC9B32005CEAA003E8E1E /* ReceivedContactRequestListener.swift in Sources */,
 				48B296AA200507070007ECEE /* AcceptContactRequestAction.swift in Sources */,
 				48E8006E2001382900F5D902 /* Chat.swift in Sources */,
+				48ABC9C12005D7DF003E8E1E /* TypingStatusListener.swift in Sources */,
+				483250A62005325200957D04 /* ChatTitleUpdateListenerObject.swift in Sources */,
 				48A9F6CA20020C87003A4168 /* ChatMessageQuery.swift in Sources */,
 				48B296AC200508410007ECEE /* IgnoreContactRequestAction.swift in Sources */,
 				48A9F6B62001EC35003A4168 /* Result.swift in Sources */,
 				48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */,
+				48ABC9C32005D871003E8E1E /* TypingStatusListenerObject.swift in Sources */,
 				48B296A8200503AF0007ECEE /* AddChatParticipantsAction.swift in Sources */,
 				48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */,
+				483250A320052A9C00957D04 /* ChatTitleUpdateListener.swift in Sources */,
 				48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */,
 				48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */,
 				48B296D0200518390007ECEE /* OnlinePresenceSwitcher.swift in Sources */,
 				48B1A954200329AE003BB573 /* PersonUpdater.swift in Sources */,
+				48ABC9BB2005D47B003E8E1E /* RecentChatListener.swift in Sources */,
 				48E8007C200141E300F5D902 /* Presence.swift in Sources */,
 				48A9F6BA2001F384003A4168 /* Registrar.swift in Sources */,
 				48A9F6B32001EB85003A4168 /* Error.swift in Sources */,
@@ -697,6 +764,7 @@
 				48A9F6C22001F9CB003A4168 /* PasswordUpdater.swift in Sources */,
 				48E1CDC620026A1F00A1FED1 /* MessageQuery.swift in Sources */,
 				48E1CDCC20026CDC00A1FED1 /* ContactQuery.swift in Sources */,
+				48ABC9B92005D18F003E8E1E /* PresenceListenerObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
