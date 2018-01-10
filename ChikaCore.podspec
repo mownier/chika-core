@@ -47,5 +47,34 @@ Pod::Spec.new do |s|
     ss.dependency 'ChikaCore/Result'
   end
 
+  s.subspec 'Service:Listener:Object' do |ss|
+    ss.source_files = 'ChikaCore/Source/Service/Listener/Object/*.swift'
+    ss.dependency 'ChikaCore/Model:Store'
+  end
+
+  s.subspec 'Service:Listener' do |ss|
+    ss.source_files = 'ChikaCore/Source/Service/Listener/*.swift'
+    ss.dependency 'ChikaCore/Service:Listener:Object'
+    ss.dependency 'ChikaCore/Result'
+  end
+
+  s.subspec 'Service:Query' do |ss|
+    ss.source_files = 'ChikaCore/Source/Service/Query/*.swift'
+    ss.dependency 'ChikaCore/Model:Store'
+    ss.dependency 'ChikaCore/Result'
+  end
+
+  s.subspec 'Service:Search' do |ss|
+    ss.source_files = 'ChikaCore/Source/Service/Search/*.swift'
+    ss.dependency 'ChikaCore/Model:Store'
+    ss.dependency 'ChikaCore/Result'
+  end
+
+  s.subspec 'Service:Writer' do |ss|
+    ss.source_files = 'ChikaCore/Source/Service/Writer/*.swift'
+    ss.dependency 'ChikaCore/Model:Store'
+    ss.dependency 'ChikaCore/Result'
+  end
+
 end
 
