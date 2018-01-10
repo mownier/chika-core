@@ -17,11 +17,11 @@ public struct RecentChatMessageListenerObject: Hashable {
     }
     
     public var hashValue: Int {
-        return message.hashValue
+        return chatID.hashValue
     }
     
     public static func ==(lhs: RecentChatMessageListenerObject, rhs: RecentChatMessageListenerObject) -> Bool {
-        return lhs.message == rhs.message
+        return lhs.chatID == rhs.chatID
     }
 }
 
