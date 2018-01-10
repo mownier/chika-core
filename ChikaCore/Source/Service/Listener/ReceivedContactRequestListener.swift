@@ -20,7 +20,7 @@ public protocol ReceivedContactRequestListenerOperator {
     func startListening(using listener: ReceivedContactRequestListener) -> Bool
 }
 
-public class ReceivedContactRequestListenerOperaton: ReceivedContactRequestListenerOperator {
+public class ReceivedContactRequestListenerOperation: ReceivedContactRequestListenerOperator {
     
     var callback: ((Result<Contact.Request>) -> Void)?
     
