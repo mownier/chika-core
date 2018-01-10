@@ -64,6 +64,7 @@
 		48ABC9BF2005D60B003E8E1E /* RecentChatMessageListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9BE2005D60B003E8E1E /* RecentChatMessageListenerObject.swift */; };
 		48ABC9C12005D7DF003E8E1E /* TypingStatusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9C02005D7DF003E8E1E /* TypingStatusListener.swift */; };
 		48ABC9C32005D871003E8E1E /* TypingStatusListenerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9C22005D871003E8E1E /* TypingStatusListenerObject.swift */; };
+		48ABC9C52005DC95003E8E1E /* TypingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ABC9C42005DC95003E8E1E /* TypingStatus.swift */; };
 		48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A951200327E4003BB573 /* MessageCreator.swift */; };
 		48B1A954200329AE003BB573 /* PersonUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A953200329AE003BB573 /* PersonUpdater.swift */; };
 		48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95520032D62003BB573 /* PersonRegistrar.swift */; };
@@ -189,6 +190,7 @@
 		48ABC9BE2005D60B003E8E1E /* RecentChatMessageListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatMessageListenerObject.swift; sourceTree = "<group>"; };
 		48ABC9C02005D7DF003E8E1E /* TypingStatusListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingStatusListener.swift; sourceTree = "<group>"; };
 		48ABC9C22005D871003E8E1E /* TypingStatusListenerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingStatusListenerObject.swift; sourceTree = "<group>"; };
+		48ABC9C42005DC95003E8E1E /* TypingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingStatus.swift; sourceTree = "<group>"; };
 		48B1A951200327E4003BB573 /* MessageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCreator.swift; sourceTree = "<group>"; };
 		48B1A953200329AE003BB573 /* PersonUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUpdater.swift; sourceTree = "<group>"; };
 		48B1A95520032D62003BB573 /* PersonRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrar.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				48E800712001387200F5D902 /* Message.swift */,
 				48E8006F2001385B00F5D902 /* Person.swift */,
 				48E8007B200141E300F5D902 /* Presence.swift */,
+				48ABC9C42005DC95003E8E1E /* TypingStatus.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				48B296A8200503AF0007ECEE /* AddChatParticipantsAction.swift in Sources */,
 				48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */,
 				483250A320052A9C00957D04 /* ChatTitleUpdateListener.swift in Sources */,
+				48ABC9C52005DC95003E8E1E /* TypingStatus.swift in Sources */,
 				48E1CDC820026AB400A1FED1 /* PersonQuery.swift in Sources */,
 				48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */,
 				48B296D0200518390007ECEE /* OnlinePresenceSwitcher.swift in Sources */,

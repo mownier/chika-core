@@ -6,12 +6,6 @@
 //  Copyright © 2018 Nir. All rights reserved.
 //
 
-public enum TypingStatus {
-    
-    case typing
-    case notTyping
-}
-
 public protocol TypingSwitcher {
     
     func switchTypingStatus(to status: TypingStatus, for chatID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
