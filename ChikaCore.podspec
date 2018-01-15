@@ -39,6 +39,10 @@ Pod::Spec.new do |s|
 
   s.subspec 'Service' do |ss|
     ss.dependency 'ChikaCore/Service:Auth'
+    ss.dependency 'ChikaCore/Service:Query'
+    ss.dependency 'ChikaCore/Service:Search'
+    ss.dependency 'ChikaCore/Service:Writer'
+    ss.dependency 'ChikaCore/Service:Listener'
   end
 
   s.subspec 'Service:Auth' do |ss|
