@@ -22,6 +22,9 @@ public class MyInfoQueryOperation: MyInfoQueryOperator {
     
     var completion: ((Result<Person>) -> Void)?
     
+    public init() {
+    }
+    
     public func withCompletion(_ aCompletion: @escaping (Result<Person>) -> Void) -> MyInfoQueryOperator {
         completion = aCompletion
         return self
