@@ -28,12 +28,12 @@ public struct Contact: Hashable {
         
         public var id: ID
         public var message: String
-        public var requestee: Person
+        public var requestor: Person
         
         public init() {
             self.id = ID("")
             self.message = ""
-            self.requestee = Person()
+            self.requestor = Person()
         }
         
         public var hashValue: Int {
