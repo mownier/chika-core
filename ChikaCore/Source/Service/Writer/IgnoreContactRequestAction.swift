@@ -8,20 +8,22 @@
 
 public protocol IgnoreContactRequestAction {
     
-    func ignoreContactRequest(withID id: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
+    func ignoreContactRequest(withID id: ID, requestorID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
 }
 
 public protocol IgnoreContactRequestActionOperator {
     
     func withCompletion(_ completion: @escaping (Result<OK>) -> Void)  -> IgnoreContactRequestActionOperator
+    func withRequestorID(_ id: ID) -> IgnoreContactRequestActionOperator
     func withContactRequestID(_ id: ID) -> IgnoreContactRequestActionOperator
     
-    func acceptContactRequest(using action: IgnoreContactRequestAction) -> Bool
+    func ignoreContactRequest(using action: IgnoreContactRequestAction) -> Bool
 }
 
 public class IgnoreContactRequestActionOperation: IgnoreContactRequestActionOperator {
     
     var completion: ((Result<OK>) -> Void)?
+    var requestorID: ID?
     var contactRequestID: ID?
     
     public init() {
@@ -32,23 +34,30 @@ public class IgnoreContactRequestActionOperation: IgnoreContactRequestActionOper
         return self
     }
     
+    
+    public func withRequestorID(_ id: ID) -> IgnoreContactRequestActionOperator {
+        requestorID = id
+        return self
+    }
+    
     public func withContactRequestID(_ id: ID) -> IgnoreContactRequestActionOperator {
         contactRequestID = id
         return self
     }
     
-    public func acceptContactRequest(using action: IgnoreContactRequestAction) -> Bool {
+    public func ignoreContactRequest(using action: IgnoreContactRequestAction) -> Bool {
         defer {
             completion = nil
+            requestorID = nil
             contactRequestID = nil
         }
         
-        guard contactRequestID != nil else {
+        guard contactRequestID != nil, requestorID != nil else {
             return false
         }
         
         let callback = completion
-        let ok = action.ignoreContactRequest(withID: contactRequestID!) { result in
+        let ok = action.ignoreContactRequest(withID: contactRequestID!, requestorID: requestorID!) { result in
             callback?(result)
         }
         return ok

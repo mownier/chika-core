@@ -9,9 +9,10 @@
 import ChikaCore
 
 class IgnoreContactRequestActionMock: IgnoreContactRequestAction {
-
-    func ignoreContactRequest(withID id: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
+    
+    func ignoreContactRequest(withID id: ID, requestorID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
         completion(.ok(OK("")))
         return true
     }
+    
 }

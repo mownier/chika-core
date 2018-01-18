@@ -9,9 +9,10 @@
 import ChikaCore
 
 class AcceptContactRequestActionMock: AcceptContactRequestAction {
-
-    func acceptContactRequest(withID id: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
+    
+    func acceptContactRequest(withID id: ID, requestorID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
         completion(.ok(OK("")))
         return true
     }
+    
 }
