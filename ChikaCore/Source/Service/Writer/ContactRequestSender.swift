@@ -8,11 +8,12 @@
 
 public protocol ContactRequestSender {
 
-    func sendContactRequest(to personID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
+    func sendContactRequest(to personID: ID, message: String, completion: @escaping (Result<OK>) -> Void) -> Bool
 }
 
 public protocol ContactRequestSenderOperator {
     
+    func withMessage( _ message: String) -> ContactRequestSenderOperator
     func withPersonID(_ id: ID) -> ContactRequestSenderOperator
     func withCompletion(_ completion: @escaping (Result<OK>) -> Void) -> ContactRequestSenderOperator
     
@@ -21,10 +22,16 @@ public protocol ContactRequestSenderOperator {
 
 public class ContactRequestSenderOperation: ContactRequestSenderOperator {
     
+    var message: String?
     var personID: ID?
     var completion: ((Result<OK>) -> Void)?
     
     public init() {
+    }
+    
+    public func withMessage(_ aMessage: String) -> ContactRequestSenderOperator {
+        message = aMessage
+        return self
     }
     
     public func withPersonID(_ id: ID) -> ContactRequestSenderOperator {
@@ -38,16 +45,20 @@ public class ContactRequestSenderOperation: ContactRequestSenderOperator {
     }
     
     public func sendContactRequest(using sender: ContactRequestSender) -> Bool {
-        guard personID != nil else {
+        defer {
+            message = nil
+            personID = nil
+            completion = nil
+        }
+        
+        guard personID != nil, message != nil else {
             return false
         }
         
         let callback = completion
-        let ok = sender.sendContactRequest(to: personID!) { result in
+        let ok = sender.sendContactRequest(to: personID!, message: message!) { result in
             callback?(result)
         }
-        personID = nil
-        completion = nil
         return ok
     }
 }

@@ -9,9 +9,10 @@
 import ChikaCore
 
 class ContactRequestSenderMock: ContactRequestSender {
-
-    func sendContactRequest(to personID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
+    
+    func sendContactRequest(to personID: ID, message: String, completion: @escaping (Result<OK>) -> Void) -> Bool {
         completion(.ok(OK("")))
         return true
     }
+    
 }

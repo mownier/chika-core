@@ -20,6 +20,12 @@ class ContactRequestSenderOperationTests: XCTestCase {
         XCTAssertFalse(ok)
         
         ok = operation.withPersonID(ID("person:1")).sendContactRequest(using: sender)
+        XCTAssertFalse(ok)
+        
+        ok = operation.withMessage("hello").sendContactRequest(using: sender)
+        XCTAssertFalse(ok)
+        
+        ok = operation.withPersonID(ID("person:1")).withMessage("hello").sendContactRequest(using: sender)
         XCTAssertTrue(ok)
     }
     
@@ -31,7 +37,7 @@ class ContactRequestSenderOperationTests: XCTestCase {
             exp.fulfill()
         }
         
-        let ok = operation.withPersonID(ID("person:1")).withCompletion(completion).sendContactRequest(using: sender)
+        let ok = operation.withPersonID(ID("person:1")).withMessage("hello").withCompletion(completion).sendContactRequest(using: sender)
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }
