@@ -9,9 +9,10 @@
 import ChikaCore
 
 class MessageCreatorMock: MessageCreator {
-
-    func createMessage(for chatID: ID, participantIDs: [ID], content: String, completion: @escaping (Result<Message>) -> Void) -> Bool {
+    
+    func createMessage(for chatID: ID, content: String, completion: @escaping (Result<Message>) -> Void) -> Bool {
         completion(.ok(Message()))
         return true
     }
+    
 }

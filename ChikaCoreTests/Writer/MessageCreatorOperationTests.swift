@@ -24,19 +24,7 @@ class MessageCreatorOperationTests: XCTestCase {
         ok = operation.withContent("message:content").createMessage(using: creator)
         XCTAssertFalse(ok)
         
-        ok = operation.withParticipantIDs([]).createMessage(using: creator)
-        XCTAssertFalse(ok)
-        
         ok = operation.withChatID(ID("chat:1")).withContent("message:content").createMessage(using: creator)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withChatID(ID("chat:1")).withParticipantIDs([]).createMessage(using: creator)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withContent("message:content").withParticipantIDs([]).createMessage(using: creator)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withChatID(ID("chat:1")).withContent("message:content").withParticipantIDs([]).createMessage(using: creator)
         XCTAssertTrue(ok)
     }
     
@@ -48,7 +36,7 @@ class MessageCreatorOperationTests: XCTestCase {
             exp.fulfill()
         }
         
-        let ok = operation.withChatID(ID("chat:1")).withContent("message:content").withParticipantIDs([]).withCompletion(completion).createMessage(using: creator)
+        let ok = operation.withChatID(ID("chat:1")).withContent("message:content").withCompletion(completion).createMessage(using: creator)
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }
