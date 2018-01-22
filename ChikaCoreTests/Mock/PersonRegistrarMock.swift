@@ -9,9 +9,10 @@
 import ChikaCore
 
 class PersonRegistrarMock: PersonRegistrar {
-
-    func registerPerson(withID: ID, email: String, completion: @escaping (Result<OK>) -> Void) -> Bool {
+    
+    func registerPerson(withCompletion completion: @escaping (Result<OK>) -> Void) -> Bool {
         completion(.ok(OK("")))
         return true
     }
+
 }
