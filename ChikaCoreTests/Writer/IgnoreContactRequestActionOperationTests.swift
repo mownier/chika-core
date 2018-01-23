@@ -13,8 +13,6 @@ class IgnoreContactRequestActionOperationTests: XCTestCase {
     
     func testIgnoreContactRequestA() {
         let id = ID("contact:request:1")
-        let requestorID = ID("person:1")
-        
         let action = IgnoreContactRequestActionMock()
         let operation = IgnoreContactRequestActionOperation()
         
@@ -22,19 +20,11 @@ class IgnoreContactRequestActionOperationTests: XCTestCase {
         XCTAssertFalse(ok)
         
         ok = operation.withContactRequestID(id).ignoreContactRequest(using: action)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withRequestorID(requestorID).ignoreContactRequest(using: action)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withContactRequestID(id).withRequestorID(requestorID).ignoreContactRequest(using: action)
         XCTAssertTrue(ok)
     }
     
     func testIgnoreContactRequestB() {
         let id = ID("contact:request:1")
-        let requestorID = ID("person:1")
-        
         let exp = expectation(description: "testIgnoreContactRequestB")
         let action = IgnoreContactRequestActionMock()
         let operation = IgnoreContactRequestActionOperation()
@@ -42,7 +32,7 @@ class IgnoreContactRequestActionOperationTests: XCTestCase {
             exp.fulfill()
         }
         
-        let ok = operation.withContactRequestID(id).withRequestorID(requestorID).withCompletion(completion).ignoreContactRequest(using: action)
+        let ok = operation.withContactRequestID(id).withCompletion(completion).ignoreContactRequest(using: action)
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }

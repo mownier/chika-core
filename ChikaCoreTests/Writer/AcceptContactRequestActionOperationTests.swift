@@ -12,29 +12,19 @@ import XCTest
 class AcceptContactRequestActionOperationTests: XCTestCase {
     
     func testAcceptContactRequestA() {
+        let id = ID("contact:request:1")
         let action = AcceptContactRequestActionMock()
         let operation = AcceptContactRequestActionOperation()
-        
-        let id = ID("contact:request:1")
-        let requestorID = ID("person:1")
         
         var ok = operation.acceptContactRequest(using: action)
         XCTAssertFalse(ok)
         
         ok = operation.withContactRequestID(id).acceptContactRequest(using: action)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withRequestorID(requestorID).acceptContactRequest(using: action)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withContactRequestID(id).withRequestorID(requestorID).acceptContactRequest(using: action)
         XCTAssertTrue(ok)
     }
     
     func testAcceptContactRequestB() {
         let id = ID("contact:request:1")
-        let requestorID = ID("person:1")
-        
         let exp = expectation(description: "testAcceptContactRequestB")
         let action = AcceptContactRequestActionMock()
         let operation = AcceptContactRequestActionOperation()
@@ -42,7 +32,7 @@ class AcceptContactRequestActionOperationTests: XCTestCase {
             exp.fulfill()
         }
         
-        let ok = operation.withContactRequestID(id).withRequestorID(requestorID).withCompletion(completion).acceptContactRequest(using: action)
+        let ok = operation.withContactRequestID(id).withCompletion(completion).acceptContactRequest(using: action)
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }
