@@ -12,14 +12,12 @@ public struct Chat: Hashable, Unique {
     public var title: String
     public var recent: Message
     public var creatorID: ID
-    public var participants: [Person]
     
     public init() {
         self.id = ID("")
         self.title = ""
         self.recent = Message()
         self.creatorID = ID("")
-        self.participants = []
     }
     
     public var hashValue: Int {
