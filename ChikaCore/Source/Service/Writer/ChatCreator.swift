@@ -8,13 +8,12 @@
 
 public protocol ChatCreator {
 
-    func createChat(withTitle title: String, message: String, participantIDs: [ID], completion: @escaping (Result<Chat>) -> Void) -> Bool
+    func createChat(withTitle title: String, participantIDs: [ID], completion: @escaping (Result<Chat>) -> Void) -> Bool
 }
 
 public protocol ChatCreatorOperator {
     
     func withTitle(_ title: String) -> ChatCreatorOperator
-    func withMessage(_ message: String) -> ChatCreatorOperator
     func withCompletion(_ completion: @escaping (Result<Chat>) -> Void) -> ChatCreatorOperator
     func withParticipantIDs(_ ids: [ID]) -> ChatCreatorOperator
     
@@ -24,7 +23,6 @@ public protocol ChatCreatorOperator {
 public class ChatCreatorOperation: ChatCreatorOperator {
     
     var title: String?
-    var message: String?
     var completion: ((Result<Chat>) -> Void)?
     var participantIDs: [ID]?
     
@@ -33,11 +31,6 @@ public class ChatCreatorOperation: ChatCreatorOperator {
     
     public func withTitle(_ aTitle: String) -> ChatCreatorOperator {
         title = aTitle
-        return self
-    }
-    
-    public func withMessage(_ aMessage: String) -> ChatCreatorOperator {
-        message = aMessage
         return self
     }
     
@@ -53,18 +46,18 @@ public class ChatCreatorOperation: ChatCreatorOperator {
     
     public func createChat(using creator: ChatCreator) -> Bool {
         defer {
+            participantIDs?.removeAll()
             title = nil
-            message = nil
             completion = nil
             participantIDs = nil
         }
         
-        guard title != nil, message != nil, participantIDs != nil else {
+        guard title != nil, participantIDs != nil else {
             return false
         }
         
         let callback = completion
-        let ok = creator.createChat(withTitle: title!, message: message!, participantIDs: participantIDs!) { result in
+        let ok = creator.createChat(withTitle: title!, participantIDs: participantIDs!) { result in
             callback?(result)
         }
         return ok

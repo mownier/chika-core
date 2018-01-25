@@ -21,22 +21,10 @@ class ChatCreatorOperationTests: XCTestCase {
         ok = operation.withTitle("chat:title").createChat(using: creator)
         XCTAssertFalse(ok)
         
-        ok = operation.withMessage("chat:message").createChat(using: creator)
-        XCTAssertFalse(ok)
-        
         ok = operation.withParticipantIDs([]).createChat(using: creator)
         XCTAssertFalse(ok)
         
-        ok = operation.withTitle("chat:title").withMessage("chat:message").createChat(using: creator)
-        XCTAssertFalse(ok)
-        
         ok = operation.withTitle("chat:title").withParticipantIDs([]).createChat(using: creator)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withMessage("chat:message").withParticipantIDs([]).createChat(using: creator)
-        XCTAssertFalse(ok)
-        
-        ok = operation.withTitle("chat:title").withMessage("chat:message").withParticipantIDs([]).createChat(using: creator)
         XCTAssertTrue(ok)
     }
     
@@ -48,7 +36,7 @@ class ChatCreatorOperationTests: XCTestCase {
             exp.fulfill()
         }
         
-        let ok = operation.withTitle("chat:title").withMessage("chat:message").withParticipantIDs([]).withCompletion(completion).createChat(using: creator)
+        let ok = operation.withTitle("chat:title").withParticipantIDs([]).withCompletion(completion).createChat(using: creator)
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }
