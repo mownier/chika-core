@@ -32,7 +32,7 @@ class AddChatParticipantsActionOperationTests: XCTestCase {
         let exp = expectation(description: "testAddChatParticipantsB")
         let action = AddChatParticipantsActionMock()
         let operation = AddChatParticipantsActionOperation()
-        let completion: (Result<[ID]>) -> Void = { _ in
+        let completion: (Result<OK>) -> Void = { _ in
             exp.fulfill()
         }
         

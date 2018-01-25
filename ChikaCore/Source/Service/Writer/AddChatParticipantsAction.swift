@@ -8,14 +8,14 @@
 
 public protocol AddChatParticipantsAction {
 
-    func addChatParticipants(withPersonIDs: [ID], chatID: ID, completion: @escaping (Result<[ID]>) -> Void) -> Bool
+    func addChatParticipants(withPersonIDs: [ID], chatID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool
 }
 
 public protocol AddChatParticipantsActionOperator {
     
     func withChatID(_ id: ID) -> AddChatParticipantsActionOperator
     func withPersonIDs(_ ids: [ID]) -> AddChatParticipantsActionOperator
-    func withCompletion(_ completion: @escaping (Result<[ID]>) -> Void) -> AddChatParticipantsActionOperator
+    func withCompletion(_ completion: @escaping (Result<OK>) -> Void) -> AddChatParticipantsActionOperator
     
     func addChatParticipants(using action: AddChatParticipantsAction) -> Bool
 }
@@ -24,7 +24,7 @@ public class AddChatParticipantsActionOperation: AddChatParticipantsActionOperat
     
     var chatID: ID?
     var personIDs: [ID]?
-    var completion: ((Result<[ID]>) -> Void)?
+    var completion: ((Result<OK>) -> Void)?
     
     public init() {
     }
@@ -39,7 +39,7 @@ public class AddChatParticipantsActionOperation: AddChatParticipantsActionOperat
         return self
     }
     
-    public func withCompletion(_ aCompletion: @escaping (Result<[ID]>) -> Void) -> AddChatParticipantsActionOperator {
+    public func withCompletion(_ aCompletion: @escaping (Result<OK>) -> Void) -> AddChatParticipantsActionOperator {
         completion = aCompletion
         return self
     }

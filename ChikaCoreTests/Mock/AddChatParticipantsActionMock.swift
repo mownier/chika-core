@@ -10,8 +10,8 @@ import ChikaCore
 
 class AddChatParticipantsActionMock: AddChatParticipantsAction {
 
-    func addChatParticipants(withPersonIDs: [ID], chatID: ID, completion: @escaping (Result<[ID]>) -> Void) -> Bool {
-        completion(.ok([]))
+    func addChatParticipants(withPersonIDs: [ID], chatID: ID, completion: @escaping (Result<OK>) -> Void) -> Bool {
+        completion(.ok(OK("")))
         return true
     }
 }
