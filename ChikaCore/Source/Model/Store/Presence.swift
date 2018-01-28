@@ -8,9 +8,9 @@
 
 public struct Presence {
     
-    var activeOn: Date
-    var isActive: Bool
-    var personID: ID
+    public var activeOn: Date
+    public var isActive: Bool
+    public var personID: ID
     
     public init() {
         self.activeOn = Date()
