@@ -18,9 +18,9 @@ class PresenceListenerMock: PresenceListener {
         return true
     }
     
-    func startListening(on personID: ID, callback: @escaping (Result<PresenceListenerObject>) -> Void) -> Bool {
-        let object = PresenceListenerObject(personID: ID("person:1"), presence: Presence())
-        callback(.ok(object))
+    func startListening(on personID: ID, callback: @escaping (Result<Presence>) -> Void) -> Bool {
+        let presence = Presence()
+        callback(.ok(presence))
         return true
     }
 }

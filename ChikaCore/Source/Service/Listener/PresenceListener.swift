@@ -10,13 +10,13 @@ public protocol PresenceListener {
 
     func stopAll() -> Bool
     func stopListening(on personID: ID) -> Bool
-    func startListening(on personID: ID, callback: @escaping (Result<PresenceListenerObject>) -> Void) -> Bool
+    func startListening(on personID: ID, callback: @escaping (Result<Presence>) -> Void) -> Bool
 }
 
 public protocol PresenceListenerOperator {
     
     func withPersonID(_ id: ID) -> PresenceListenerOperator
-    func withCallback(_ callback: @escaping (Result<PresenceListenerObject>) -> Void) -> PresenceListenerOperator
+    func withCallback(_ callback: @escaping (Result<Presence>) -> Void) -> PresenceListenerOperator
     
     func stopAll(using listener: PresenceListener) -> Bool
     func stopListening(using listener: PresenceListener) -> Bool
@@ -26,7 +26,7 @@ public protocol PresenceListenerOperator {
 public class PresenceListenerOperation: PresenceListenerOperator {
     
     var personID: ID?
-    var callback: ((Result<PresenceListenerObject>) -> Void)?
+    var callback: ((Result<Presence>) -> Void)?
     
     public init() {
     }
@@ -36,7 +36,7 @@ public class PresenceListenerOperation: PresenceListenerOperator {
         return self
     }
     
-    public func withCallback(_ aCallback: @escaping (Result<PresenceListenerObject>) -> Void) -> PresenceListenerOperator {
+    public func withCallback(_ aCallback: @escaping (Result<Presence>) -> Void) -> PresenceListenerOperator {
         callback = aCallback
         return self
     }

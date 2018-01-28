@@ -37,7 +37,7 @@ class PresenceListenerOperationTests: XCTestCase {
     func testStartListeningA() {
         let exp = expectation(description: "testStartListeningA")
         let personID = ID("person:1")
-        let callback: (Result<PresenceListenerObject>) -> Void = { _ in
+        let callback: (Result<Presence>) -> Void = { _ in
             exp.fulfill()
         }
         
