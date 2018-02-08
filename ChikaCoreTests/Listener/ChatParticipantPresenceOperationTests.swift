@@ -35,9 +35,9 @@ class ChatParticipantPresenceOperationTests: XCTestCase {
     }
     
     func testStartListeningA() {
-        let exp = expectation(description: "testStopListeningA")
+        let exp = expectation(description: "testStartListeningA")
         let chatID = ID("chat:1")
-        let callback: (Result<Presence>) -> Void = { _ in
+        let callback: (Result<ChatParticipantPresenceListenerObject>) -> Void = { _ in
             exp.fulfill()
         }
         

@@ -10,13 +10,13 @@ public protocol ChatParticipantPresenceListener {
 
     func stopAll() -> Bool
     func stopListening(on chatID: ID) -> Bool
-    func startListening(on chatID: ID, callback: @escaping (Result<Presence>) -> Void) -> Bool
+    func startListening(on chatID: ID, callback: @escaping (Result<ChatParticipantPresenceListenerObject>) -> Void) -> Bool
 }
 
 public protocol ChatParticipantPresenceListenerOperator {
     
     func withChatID(_ id: ID) -> ChatParticipantPresenceListenerOperator
-    func withCallback(_ callback: @escaping (Result<Presence>) -> Void) -> ChatParticipantPresenceListenerOperator
+    func withCallback(_ callback: @escaping (Result<ChatParticipantPresenceListenerObject>) -> Void) -> ChatParticipantPresenceListenerOperator
     
     func stopAll(using listener: ChatParticipantPresenceListener) -> Bool
     func stopListening(using listener: ChatParticipantPresenceListener) -> Bool
@@ -26,7 +26,7 @@ public protocol ChatParticipantPresenceListenerOperator {
 public class ChatParticipantPresenceListenerOperation: ChatParticipantPresenceListenerOperator {
     
     var chatID: ID?
-    var callback: ((Result<Presence>) -> Void)?
+    var callback: ((Result<ChatParticipantPresenceListenerObject>) -> Void)?
     
     public init() {
     }
@@ -36,7 +36,7 @@ public class ChatParticipantPresenceListenerOperation: ChatParticipantPresenceLi
         return self
     }
     
-    public func withCallback(_ aCallback: @escaping (Result<Presence>) -> Void) -> ChatParticipantPresenceListenerOperator {
+    public func withCallback(_ aCallback: @escaping (Result<ChatParticipantPresenceListenerObject>) -> Void) -> ChatParticipantPresenceListenerOperator {
         callback = aCallback
         return self
     }

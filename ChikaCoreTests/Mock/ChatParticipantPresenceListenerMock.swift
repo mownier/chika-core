@@ -18,8 +18,9 @@ class ChatParticipantPresenceListenerMock: ChatParticipantPresenceListener {
         return true
     }
     
-    func startListening(on chatID: ID, callback: @escaping (Result<Presence>) -> Void) -> Bool {
-        callback(.ok(Presence()))
+    func startListening(on chatID: ID, callback: @escaping (Result<ChatParticipantPresenceListenerObject>) -> Void) -> Bool {
+        let object = ChatParticipantPresenceListenerObject(chatID: chatID, presence: Presence())
+        callback(.ok(object))
         return true
     }
     
