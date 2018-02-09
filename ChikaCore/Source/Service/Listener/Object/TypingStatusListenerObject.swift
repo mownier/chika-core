@@ -8,10 +8,12 @@
 
 public struct TypingStatusListenerObject: Hashable {
     
+    public internal(set) var chatID: ID
     public internal(set) var status: TypingStatus
     public internal(set) var person: Person
     
-    public init(person: Person, status: TypingStatus) {
+    public init(chatID: ID, person: Person, status: TypingStatus) {
+        self.chatID = chatID
         self.status = status
         self.person = person
     }

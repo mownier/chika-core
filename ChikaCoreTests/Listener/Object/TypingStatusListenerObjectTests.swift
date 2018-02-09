@@ -12,6 +12,7 @@ import XCTest
 class TypingStatusListenerObjectTests: XCTestCase {
     
     func testHashValueA() {
+        let chatID = ID("chat:1")
         var person1 = Person()
         var person2 = Person()
         var person3 = Person()
@@ -20,9 +21,9 @@ class TypingStatusListenerObjectTests: XCTestCase {
         person2.id = ID("person:2")
         person3.id = ID("person:1")
         
-        let object1 = TypingStatusListenerObject(person: person1, status: .typing)
-        let object2 = TypingStatusListenerObject(person: person2, status: .typing)
-        let object3 = TypingStatusListenerObject(person: person3, status: .typing)
+        let object1 = TypingStatusListenerObject(chatID: chatID, person: person1, status: .typing)
+        let object2 = TypingStatusListenerObject(chatID: chatID, person: person2, status: .typing)
+        let object3 = TypingStatusListenerObject(chatID: chatID, person: person3, status: .typing)
         
         var info = [TypingStatusListenerObject: Bool]()
         info[object1] = true

@@ -19,7 +19,7 @@ class TypingStatusListenerMock: TypingStatusListener {
     }
     
     func startListening(on chatID: ID, callback: @escaping (Result<TypingStatusListenerObject>) -> Void) -> Bool {
-        let object = TypingStatusListenerObject(person: Person(), status: .typing)
+        let object = TypingStatusListenerObject(chatID: chatID, person: Person(), status: .typing)
         callback(.ok(object))
         return true
     }
