@@ -37,7 +37,7 @@ class RecentChatMessageListenerOperationTests: XCTestCase {
     func testStartListeningA() {
         let exp = expectation(description: "testStartListeningA")
         let chatID = ID("chat:1")
-        let callback: (Result<RecentChatMessageListenerObject>) -> Void = { _ in
+        let callback: (Result<Chat>) -> Void = { _ in
             exp.fulfill()
         }
         

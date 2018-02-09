@@ -10,13 +10,13 @@ public protocol RecentChatMessageListener {
 
     func stopAll() -> Bool
     func stopListening(on chatID: ID) -> Bool
-    func startListening(on chatID: ID, callback: @escaping (Result<RecentChatMessageListenerObject>) -> Void) -> Bool
+    func startListening(on chatID: ID, callback: @escaping (Result<Chat>) -> Void) -> Bool
 }
 
 public protocol RecentChatMessageListenerOperator {
     
     func withChatID(_ id: ID) -> RecentChatMessageListenerOperator
-    func withCallback(_ callback: @escaping (Result<RecentChatMessageListenerObject>) -> Void) -> RecentChatMessageListenerOperator
+    func withCallback(_ callback: @escaping (Result<Chat>) -> Void) -> RecentChatMessageListenerOperator
     
     func stopAll(using listener: RecentChatMessageListener) -> Bool
     func stopListening(using listener: RecentChatMessageListener) -> Bool
@@ -26,7 +26,7 @@ public protocol RecentChatMessageListenerOperator {
 public class RecentChatMessageListenerOperation: RecentChatMessageListenerOperator {
     
     var chatID: ID?
-    var callback: ((Result<RecentChatMessageListenerObject>) -> Void)?
+    var callback: ((Result<Chat>) -> Void)?
     
     public init(){
     }
@@ -36,7 +36,7 @@ public class RecentChatMessageListenerOperation: RecentChatMessageListenerOperat
         return self
     }
     
-    public func withCallback(_ aCallback: @escaping (Result<RecentChatMessageListenerObject>) -> Void) -> RecentChatMessageListenerOperator {
+    public func withCallback(_ aCallback: @escaping (Result<Chat>) -> Void) -> RecentChatMessageListenerOperator {
         callback = aCallback
         return self
     }

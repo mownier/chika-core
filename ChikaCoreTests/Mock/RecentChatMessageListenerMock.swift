@@ -18,9 +18,8 @@ class RecentChatMessageListenerMock: RecentChatMessageListener {
         return true
     }
     
-    func startListening(on chatID: ID, callback: @escaping (Result<RecentChatMessageListenerObject>) -> Void) -> Bool {
-        let object = RecentChatMessageListenerObject(chatID: ID("chat:1"), message: Message())
-        callback(.ok(object))
+    func startListening(on chatID: ID, callback: @escaping (Result<Chat>) -> Void) -> Bool {
+        callback(.ok(Chat()))
         return true
     }
 }
