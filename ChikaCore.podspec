@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'ChikaCore'
-  s.version  = '0.12.1'
+  s.version  = '0.13'
   s.summary  = 'Core for Chika iOS App'
   s.platform = :ios, '11.0'
   s.license  = { :type => 'MIT', :file => 'LICENSE' }
