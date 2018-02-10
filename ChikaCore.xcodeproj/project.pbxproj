@@ -42,6 +42,7 @@
 		488421C9200C8B530027A144 /* MyInfoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488421C8200C8B530027A144 /* MyInfoQuery.swift */; };
 		488421CB200C8C9A0027A144 /* MyInfoQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488421CA200C8C9A0027A144 /* MyInfoQueryOperationTests.swift */; };
 		488421CD200C8CAD0027A144 /* MyInfoQueryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488421CC200C8CAD0027A144 /* MyInfoQueryMock.swift */; };
+		489A57C9202F31FD00E9930E /* MessageSeenInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A57C8202F31FD00E9930E /* MessageSeenInfoTests.swift */; };
 		489A7D662005ED1700AAD619 /* ChatTitleUpdateListenerOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A7D652005ED1700AAD619 /* ChatTitleUpdateListenerOperationTests.swift */; };
 		489A7D682005ED2900AAD619 /* ChatTitleUpdateListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A7D672005ED2900AAD619 /* ChatTitleUpdateListenerMock.swift */; };
 		489A7D6A2005F07800AAD619 /* ContactRequestActionListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489A7D692005F07800AAD619 /* ContactRequestActionListenerMock.swift */; };
@@ -222,6 +223,7 @@
 		488421C8200C8B530027A144 /* MyInfoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoQuery.swift; sourceTree = "<group>"; };
 		488421CA200C8C9A0027A144 /* MyInfoQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoQueryOperationTests.swift; sourceTree = "<group>"; };
 		488421CC200C8CAD0027A144 /* MyInfoQueryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoQueryMock.swift; sourceTree = "<group>"; };
+		489A57C8202F31FD00E9930E /* MessageSeenInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSeenInfoTests.swift; sourceTree = "<group>"; };
 		489A7D652005ED1700AAD619 /* ChatTitleUpdateListenerOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleUpdateListenerOperationTests.swift; sourceTree = "<group>"; };
 		489A7D672005ED2900AAD619 /* ChatTitleUpdateListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleUpdateListenerMock.swift; sourceTree = "<group>"; };
 		489A7D692005F07800AAD619 /* ContactRequestActionListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestActionListenerMock.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 				48A785A220051DDF002B6CCB /* ChatTests.swift */,
 				48D887842005243E0056E30B /* ContactRequestTests.swift */,
 				48D887822005239D0056E30B /* ContactTests.swift */,
+				489A57C8202F31FD00E9930E /* MessageSeenInfoTests.swift */,
 				48A785A720051F55002B6CCB /* MessageTests.swift */,
 				48D8877D200521890056E30B /* PersonSearchObjectTests.swift */,
 				48A785A920051FE9002B6CCB /* PersonTests.swift */,
@@ -971,6 +974,7 @@
 				4848403C2003D7790020D1AB /* SignOutMock.swift in Sources */,
 				48A7859520051943002B6CCB /* OfflinePresenceSwitcherMock.swift in Sources */,
 				4872A09520048AB80088F130 /* PersonQueryOperationTests.swift in Sources */,
+				489A57C9202F31FD00E9930E /* MessageSeenInfoTests.swift in Sources */,
 				48ABC9C82005DE15003E8E1E /* AddedContactListenerMock.swift in Sources */,
 				48CEB4FA2005F97E00D3C681 /* RemovedContactListenerOperationTests.swift in Sources */,
 				48A78599200519B5002B6CCB /* OfflinePresenceSwitcherOperationTests.swift in Sources */,
