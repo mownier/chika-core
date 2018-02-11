@@ -104,6 +104,9 @@
 		48ADA21D20187334003B6238 /* ChatParticipantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADA21C20187334003B6238 /* ChatParticipantQuery.swift */; };
 		48ADA21F2018747A003B6238 /* ChatParticipantQueryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADA21E2018747A003B6238 /* ChatParticipantQueryMock.swift */; };
 		48ADA221201874BE003B6238 /* ChatParticipantQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADA220201874BE003B6238 /* ChatParticipantQueryOperationTests.swift */; };
+		48AF9CF720308C1B00104704 /* SeenMessageMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF9CF620308C1B00104704 /* SeenMessageMarker.swift */; };
+		48AF9CF920308E4E00104704 /* SeenMessageMarkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF9CF820308E4E00104704 /* SeenMessageMarkerMock.swift */; };
+		48AF9CFB20308EA200104704 /* SeenMessageMarkerOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF9CFA20308EA200104704 /* SeenMessageMarkerOperationTests.swift */; };
 		48B1A952200327E4003BB573 /* MessageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A951200327E4003BB573 /* MessageCreator.swift */; };
 		48B1A954200329AE003BB573 /* PersonUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A953200329AE003BB573 /* PersonUpdater.swift */; };
 		48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1A95520032D62003BB573 /* PersonRegistrar.swift */; };
@@ -285,6 +288,9 @@
 		48ADA21C20187334003B6238 /* ChatParticipantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatParticipantQuery.swift; sourceTree = "<group>"; };
 		48ADA21E2018747A003B6238 /* ChatParticipantQueryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatParticipantQueryMock.swift; sourceTree = "<group>"; };
 		48ADA220201874BE003B6238 /* ChatParticipantQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatParticipantQueryOperationTests.swift; sourceTree = "<group>"; };
+		48AF9CF620308C1B00104704 /* SeenMessageMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMessageMarker.swift; sourceTree = "<group>"; };
+		48AF9CF820308E4E00104704 /* SeenMessageMarkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMessageMarkerMock.swift; sourceTree = "<group>"; };
+		48AF9CFA20308EA200104704 /* SeenMessageMarkerOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMessageMarkerOperationTests.swift; sourceTree = "<group>"; };
 		48B1A951200327E4003BB573 /* MessageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCreator.swift; sourceTree = "<group>"; };
 		48B1A953200329AE003BB573 /* PersonUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUpdater.swift; sourceTree = "<group>"; };
 		48B1A95520032D62003BB573 /* PersonRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrar.swift; sourceTree = "<group>"; };
@@ -464,6 +470,7 @@
 				48B296C72005142A0007ECEE /* PersonRegistrarOperationTests.swift */,
 				48B296CB200516010007ECEE /* PersonUpdaterOperationTests.swift */,
 				48A7859E20051B67002B6CCB /* TypingSwitcherOperationTests.swift */,
+				48AF9CFA20308EA200104704 /* SeenMessageMarkerOperationTests.swift */,
 			);
 			path = Writer;
 			sourceTree = "<group>";
@@ -652,12 +659,13 @@
 				4872A09620048D2D0088F130 /* RecentChatMessageQueryMock.swift */,
 				48B1A96D20034B24003BB573 /* RegistrarMock.swift */,
 				48CEB4F72005F94000D3C681 /* RemovedContactListenerMock.swift */,
+				48A36CE1202ED55000099941 /* SeenMessageListenerMock.swift */,
+				48AF9CF820308E4E00104704 /* SeenMessageMarkerMock.swift */,
 				48B1A97320035031003BB573 /* SignInMock.swift */,
 				4848403B2003D7790020D1AB /* SignOutMock.swift */,
 				48CEB4FB2005FA8B00D3C681 /* TypingStatusListenerMock.swift */,
 				48A7859C20051B31002B6CCB /* TypingSwitcherMock.swift */,
 				48A36CDF202ED51D00099941 /* UnreadChatMessageCountQueryMock.swift */,
-				48A36CE1202ED55000099941 /* SeenMessageListenerMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -706,6 +714,7 @@
 				48B296CF200518390007ECEE /* OnlinePresenceSwitcher.swift */,
 				48B1A95520032D62003BB573 /* PersonRegistrar.swift */,
 				48B1A953200329AE003BB573 /* PersonUpdater.swift */,
+				48AF9CF620308C1B00104704 /* SeenMessageMarker.swift */,
 				48B1A95B200332D1003BB573 /* TypingSwitcher.swift */,
 			);
 			path = Writer;
@@ -931,6 +940,7 @@
 				48D32207201B694C005A1AB8 /* NameUpdater.swift in Sources */,
 				48A36CD6202EC93000099941 /* UnreadChatMessageCountQuery.swift in Sources */,
 				48B296AA200507070007ECEE /* AcceptContactRequestAction.swift in Sources */,
+				48AF9CF720308C1B00104704 /* SeenMessageMarker.swift in Sources */,
 				48E8006E2001382900F5D902 /* Chat.swift in Sources */,
 				48ABC9C12005D7DF003E8E1E /* TypingStatusListener.swift in Sources */,
 				483250A62005325200957D04 /* ChatTitleUpdateListenerObject.swift in Sources */,
@@ -994,6 +1004,7 @@
 				48B296C2200511720007ECEE /* MessageCreatorMock.swift in Sources */,
 				48A36CE6202ED5CA00099941 /* SeenMessageListenerObjectTests.swift in Sources */,
 				48A36CDE202ED4CD00099941 /* MessageSeenInfoQueryMock.swift in Sources */,
+				48AF9CF920308E4E00104704 /* SeenMessageMarkerMock.swift in Sources */,
 				48B296B220050B8C0007ECEE /* AddChatParticipantsActionMock.swift in Sources */,
 				48B296BC20050F0C0007ECEE /* ContactRequestSenderOperationTests.swift in Sources */,
 				48D3220B201B6A93005A1AB8 /* DisplayNameUpdaterMock.swift in Sources */,
@@ -1069,6 +1080,7 @@
 				48584B53201DAE8000B2190A /* AddedIntoChatListenerMock.swift in Sources */,
 				48D32215201B6B5A005A1AB8 /* NameUpdaterOperationTests.swift in Sources */,
 				484840402003D90E0020D1AB /* PasswordUpdaterMock.swift in Sources */,
+				48AF9CFB20308EA200104704 /* SeenMessageMarkerOperationTests.swift in Sources */,
 				48CEB4FE2005FAD600D3C681 /* TypingStatusListenerOperationTests.swift in Sources */,
 				48A36CEA202ED64200099941 /* MessageSeenInfoQueryOperationTests.swift in Sources */,
 				48B296C42005119D0007ECEE /* MessageCreatorOperationTests.swift in Sources */,
