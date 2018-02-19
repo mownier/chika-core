@@ -18,6 +18,10 @@ public struct ID: Hashable, CustomStringConvertible {
     public init(_ string: String) {
         self.string = string
     }
+
+    public var isEmpty: Bool {
+        return string.isEmpty
+    }
     
     public var description: String {
         return string
