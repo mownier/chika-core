@@ -26,6 +26,9 @@ class ChatCreatorOperationTests: XCTestCase {
         
         ok = operation.withTitle("chat:title").withParticipantIDs([]).createChat(using: creator)
         XCTAssertTrue(ok)
+        
+        ok = operation.withTitle("chat:title").withPhotoURL("http://photo/1.png").withParticipantIDs([]).createChat(using: creator)
+        XCTAssertTrue(ok)
     }
     
     func testCreateChatB() {
