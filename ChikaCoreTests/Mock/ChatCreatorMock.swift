@@ -10,7 +10,7 @@ import ChikaCore
 
 class ChatCreatorMock: ChatCreator {
 
-    func createChat(withTitle title: String, participantIDs: [ID], completion: @escaping (Result<Chat>) -> Void) -> Bool {
+    func createChat(withTitle title: String, participantIDs: [ID], photoURL: String, completion: @escaping (Result<Chat>) -> Void) -> Bool {
         completion(.ok(Chat()))
         return true
     }
