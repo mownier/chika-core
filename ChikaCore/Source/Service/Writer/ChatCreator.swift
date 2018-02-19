@@ -8,12 +8,13 @@
 
 public protocol ChatCreator {
 
-    func createChat(withTitle title: String, participantIDs: [ID], completion: @escaping (Result<Chat>) -> Void) -> Bool
+    func createChat(withTitle title: String, participantIDs: [ID], photoURL: String, completion: @escaping (Result<Chat>) -> Void) -> Bool
 }
 
 public protocol ChatCreatorOperator {
     
     func withTitle(_ title: String) -> ChatCreatorOperator
+    func withPhotoURL(_ photoURL: String) -> ChatCreatorOperator
     func withCompletion(_ completion: @escaping (Result<Chat>) -> Void) -> ChatCreatorOperator
     func withParticipantIDs(_ ids: [ID]) -> ChatCreatorOperator
     
@@ -23,6 +24,7 @@ public protocol ChatCreatorOperator {
 public class ChatCreatorOperation: ChatCreatorOperator {
     
     var title: String?
+    var photoURL: String?
     var completion: ((Result<Chat>) -> Void)?
     var participantIDs: [ID]?
     
@@ -31,6 +33,11 @@ public class ChatCreatorOperation: ChatCreatorOperator {
     
     public func withTitle(_ aTitle: String) -> ChatCreatorOperator {
         title = aTitle
+        return self
+    }
+    
+    public func withPhotoURL(_ aPhotoURL: String) -> ChatCreatorOperator {
+        photoURL = aPhotoURL
         return self
     }
     
@@ -46,10 +53,11 @@ public class ChatCreatorOperation: ChatCreatorOperator {
     
     public func createChat(using creator: ChatCreator) -> Bool {
         defer {
-            participantIDs?.removeAll()
             title = nil
+            photoURL = nil
             completion = nil
             participantIDs = nil
+            participantIDs?.removeAll()
         }
         
         guard title != nil, participantIDs != nil else {
@@ -57,7 +65,7 @@ public class ChatCreatorOperation: ChatCreatorOperator {
         }
         
         let callback = completion
-        let ok = creator.createChat(withTitle: title!, participantIDs: participantIDs!) { result in
+        let ok = creator.createChat(withTitle: title!, participantIDs: participantIDs!, photoURL: photoURL ?? "") { result in
             callback?(result)
         }
         return ok
