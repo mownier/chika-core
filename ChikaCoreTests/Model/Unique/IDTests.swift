@@ -16,4 +16,12 @@ class IDTests: XCTestCase {
         XCTAssertEqual("chat:1", "\(id)")
     }
     
+    func testIsEmptyA() {
+        var id = ID("chat:1")
+        XCTAssertFalse(id.isEmpty)
+        
+        id = ID("")
+        XCTAssertTrue(id.isEmpty)
+    }
+    
 }
