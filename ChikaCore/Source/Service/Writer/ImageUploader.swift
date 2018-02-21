@@ -11,10 +11,12 @@ import UIKit
 public protocol ImageUploader {
 
     @discardableResult
-    func uploadImage(_ image: UIImage, completion: @escaping (Result<URL>) -> Void) -> Bool
+    func uploadImage(_ image: UIImage, onProgress: ((Progress?) -> Void)?, completion: @escaping (Result<URL>) -> Void) -> Bool
 }
 
 public protocol ImageUploaderOperator {
+    
+    func onProgress(_ block: @escaping (Progress?) -> Void) -> ImageUploaderOperator
     
     func withImage(_ image: @escaping () -> UIImage) -> ImageUploaderOperator
     func withCompletion(_ completion: @escaping (Result<URL>) -> Void) -> ImageUploaderOperator
@@ -26,9 +28,15 @@ public protocol ImageUploaderOperator {
 public class ImageUploaderOperation: ImageUploaderOperator {
     
     var image: (() -> UIImage)?
+    var onProgress: ((Progress?) -> Void)?
     var completion: ((Result<URL>) -> Void)?
     
     public init() {
+    }
+    
+    public func onProgress(_ block: @escaping (Progress?) -> Void) -> ImageUploaderOperator {
+        onProgress = block
+        return self
     }
     
     public func withImage(_ anImage: @escaping () -> UIImage) -> ImageUploaderOperator {
@@ -53,7 +61,7 @@ public class ImageUploaderOperation: ImageUploaderOperator {
         }
         
         let callback = completion
-        let ok = uploader.uploadImage(image!()) { result in
+        let ok = uploader.uploadImage(image!(), onProgress: onProgress) { result in
             callback?(result)
         }
         

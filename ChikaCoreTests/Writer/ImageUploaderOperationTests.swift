@@ -29,6 +29,15 @@ class ImageUploaderOperationTests: XCTestCase {
             UIImage()
         }).uploadImage(using: uploader)
         XCTAssertTrue(ok)
+        
+        ok = operation.onProgress({
+            print($0 == nil ? "no progress" : "has progress")
+            
+        }).withImage({
+            UIImage()
+            
+        }).uploadImage(using: uploader)
+        XCTAssertTrue(ok)
     }
     
     func testUploadImageB() {
@@ -36,7 +45,17 @@ class ImageUploaderOperationTests: XCTestCase {
         let completion: (Result<URL>) -> Void = { _ in
             exp.fulfill()
         }
-        let ok = operation.withImage({ UIImage() }).withCompletion(completion).uploadImage(using: uploader)
+        let ok = operation.onProgress({
+            print($0 == nil ? "no progress" : "has progress")
+            
+        }).withImage({
+            UIImage()
+            
+        }).withCompletion({
+            completion($0)
+            
+        }).uploadImage(using: uploader)
+        
         XCTAssertTrue(ok)
         wait(for: [exp], timeout: 1.0)
     }

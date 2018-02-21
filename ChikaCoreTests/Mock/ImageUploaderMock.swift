@@ -10,7 +10,9 @@ import ChikaCore
 
 class ImageUploaderMock: ImageUploader {
 
-    func uploadImage(_ image: UIImage, completion: @escaping (Result<URL>) -> Void) -> Bool {
+    func uploadImage(_ image: UIImage, onProgress: ((Progress?) -> Void)?, completion: @escaping (Result<URL>) -> Void) -> Bool {
+        onProgress?(Progress.current())
+        
         let url = URL(string: "https://chika.com")!
         completion(.ok(url))
         return true
