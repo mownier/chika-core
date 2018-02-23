@@ -25,6 +25,7 @@
 		48584B51201DADA100B2190A /* AddedIntoChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48584B50201DADA100B2190A /* AddedIntoChatListener.swift */; };
 		48584B53201DAE8000B2190A /* AddedIntoChatListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48584B52201DAE8000B2190A /* AddedIntoChatListenerMock.swift */; };
 		48584B55201DAED100B2190A /* AddedIntoChatListenerOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48584B54201DAED100B2190A /* AddedIntoChatListenerOperationTests.swift */; };
+		486512B220405BD2003EEF44 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486512B120405BD2003EEF44 /* Process.swift */; };
 		4872A087200484470088F130 /* ContactQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A086200484470088F130 /* ContactQueryOperationTests.swift */; };
 		4872A0892004845C0088F130 /* ContactQueryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A0882004845C0088F130 /* ContactQueryMock.swift */; };
 		4872A08B2004869C0088F130 /* InboxQueryOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872A08A2004869C0088F130 /* InboxQueryOperationTests.swift */; };
@@ -212,6 +213,7 @@
 		48584B50201DADA100B2190A /* AddedIntoChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedIntoChatListener.swift; sourceTree = "<group>"; };
 		48584B52201DAE8000B2190A /* AddedIntoChatListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedIntoChatListenerMock.swift; sourceTree = "<group>"; };
 		48584B54201DAED100B2190A /* AddedIntoChatListenerOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedIntoChatListenerOperationTests.swift; sourceTree = "<group>"; };
+		486512B120405BD2003EEF44 /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
 		4872A086200484470088F130 /* ContactQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactQueryOperationTests.swift; sourceTree = "<group>"; };
 		4872A0882004845C0088F130 /* ContactQueryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactQueryMock.swift; sourceTree = "<group>"; };
 		4872A08A2004869C0088F130 /* InboxQueryOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxQueryOperationTests.swift; sourceTree = "<group>"; };
@@ -449,6 +451,14 @@
 				48A36CE7202ED60700099941 /* UnreadChatMessageCountQueryOperationTests.swift */,
 			);
 			path = Query;
+			sourceTree = "<group>";
+		};
+		486512B020405BBC003EEF44 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				486512B120405BD2003EEF44 /* Process.swift */,
+			);
+			path = Process;
 			sourceTree = "<group>";
 		};
 		4872A09C20048FCB0088F130 /* Search */ = {
@@ -777,6 +787,7 @@
 		48E80068200136DC00F5D902 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				486512B020405BBC003EEF44 /* Process */,
 				48A9F6B12001EB75003A4168 /* Error */,
 				48E80069200136EA00F5D902 /* Model */,
 				48A9F6B42001EC1F003A4168 /* Result */,
@@ -960,6 +971,7 @@
 				48B1A95620032D62003BB573 /* PersonRegistrar.swift in Sources */,
 				48A36CD8202ECC2300099941 /* MessageSeenInfoQuery.swift in Sources */,
 				48ABC9C32005D871003E8E1E /* TypingStatusListenerObject.swift in Sources */,
+				486512B220405BD2003EEF44 /* Process.swift in Sources */,
 				48A36CDA202ED19700099941 /* SeenMessageListener.swift in Sources */,
 				48B296A8200503AF0007ECEE /* AddChatParticipantsAction.swift in Sources */,
 				48E1CDD92002785C00A1FED1 /* ContactRequestSender.swift in Sources */,
