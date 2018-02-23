@@ -9,6 +9,10 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/mownier/chika-core.git', :tag => s.version.to_s }
   s.requires_arc = true
 
+  s.subspec 'Process' do |ss|
+    ss.source_files = 'ChikaCore/Source/Process/*.swift'
+  end
+
   s.subspec 'Error' do |ss|
     ss.source_files = 'ChikaCore/Source/Error/*.swift'
   end
@@ -49,6 +53,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'ChikaCore/Source/Service/Auth/*.swift'
     ss.dependency 'ChikaCore/Model:Auth'
     ss.dependency 'ChikaCore/Result'
+    ss.dependency 'ChikaCore/Process'
   end
 
   s.subspec 'Service:Listener:Object' do |ss|
@@ -60,24 +65,28 @@ Pod::Spec.new do |s|
     ss.source_files = 'ChikaCore/Source/Service/Listener/*.swift'
     ss.dependency 'ChikaCore/Service:Listener:Object'
     ss.dependency 'ChikaCore/Result'
+    ss.dependency 'ChikaCore/Process'
   end
 
   s.subspec 'Service:Query' do |ss|
     ss.source_files = 'ChikaCore/Source/Service/Query/*.swift'
     ss.dependency 'ChikaCore/Model:Store'
     ss.dependency 'ChikaCore/Result'
+    ss.dependency 'ChikaCore/Process'
   end
 
   s.subspec 'Service:Search' do |ss|
     ss.source_files = 'ChikaCore/Source/Service/Search/*.swift'
     ss.dependency 'ChikaCore/Model:Store'
     ss.dependency 'ChikaCore/Result'
+    ss.dependency 'ChikaCore/Process'
   end
 
   s.subspec 'Service:Writer' do |ss|
     ss.source_files = 'ChikaCore/Source/Service/Writer/*.swift'
     ss.dependency 'ChikaCore/Model:Store'
     ss.dependency 'ChikaCore/Result'
+    ss.dependency 'ChikaCore/Process'
   end
 
 end
