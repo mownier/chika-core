@@ -23,5 +23,5 @@ public protocol Resumable {
 public protocol Pauseable {
     
     @discardableResult
-    func cancel() -> Bool
+    func pause() -> Bool
 }
